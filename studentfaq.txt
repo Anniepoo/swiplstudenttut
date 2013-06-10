@@ -1,0 +1,790 @@
+﻿Frequently Asked Questions for SWI-Prolog
+=========================================
+Anne Ogborn <aogborn@uh.edu>
+v0.1  June 2013
+
+
+Strong Advice for Students on ##prolog
+--------------------------------------
+
+There are about 100,000 students who take a programming languages class that includes some basic Prolog *each semester* .
+
+There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.
+
+This means if you discover the great fun and power of Prolog and fall in love with it, we'll take you to our breast. BUT...
+
+In self defense, regular denizens of ##prolog will *definitely ignore you* if you ignore the five C's - 
+
+_correct_ ::
+  Accurately reflects what you really want to know
+  
+_complete_ ::
+  We have all the info we need, not just the fragment you're 'sure' is the problem.
+  
+_concise_ ::
+  Not a dump of your 2000 line opus. Yes, this is in tension with _complete_, but you can find the balance.
+  
+_clear_ ::
+  Clarify the question in your own mind, then express it with literate English.
+  
+_courteous_ ::
+  We don't want people to 叩头 (Google it!  It's good practice!) to us.  We *do*, on the other hand, think that abuse is uncalled for.
+
+Correct
+~~~~~~~
+
+* Understand what you really want to do. Don't ask about getting the last 3 characters in a string if you want the file extension.
+
+* Do you understand the homework _problem_, let alone how to answer it?
+
+* Differentiate between goals and implementation.
+
+* If you're asking about an implementation detail instead of the goal in an unfamiliar language, you're almost certainly asking the wrong question.
+
+* Don't come to us with _random weird way of doing something simple_ and instead of taking advice that you want _really simple thing_ insist that we help you with _random weird way_.  Better than talking about the way, talk about what end result you want; the *why* of your question.  For example, don't ask how to do binary bit flipping for Unix file modes when your real question involves how to make a file read-only.
+
+* Don't make the bad assumption that Prolog can't handle "normal" programming tasks and that you have to wrap it in C\++ or Java wrappers
+to do simple I/O or maintain a few data structures. Then get lost in details of the JPL or Prolog-C++ libraries (which are as hairy as
+such low level glue libs usually are), and ask us to fix it. If you really need to do inter-language communication you should know
+Prolog already. If you want to use Prolog as a back end, ask advice in the channel about the best way to go about it.
+
+Complete
+~~~~~~~~
+
+* You need to give us a complete program, not a fragment.  Provide the _minimal_, _complete_ expression of whatever your problem is.  
+
+* Give us code that runs, not a mangled fragment. We actually might try to run it.
+
+* In Prolog code is data and vice versa. A program that depends on 'some data' we don't have isn't complete.
+
+Concise
+~~~~~~~
+
+* Don't give us a long diatribe about how hard you've worked on this, how you figured out that case matters, etc ad nauseum.
+
+* Don't dump a thousand lines of code and expect people to work it all out for you. Write a small sample that demonstrates the problem.
+You may find that in making the minimal example you'll understand your problem anyway.
+
+Clear
+~~~~~
+
+* Don't paste your code into irc one line at a time so it's all jumbled. Use http://pastebin.com/[Pastebin]  or http://collabedit.com/[CollabEdit] or gist or something.
+
+* Make sure your code's properly indented and has reasonable variable names. About 10% of the questions asked in ##prolog are solved by the person asking them when we insist they go away and clean up the code first.
+
+* Use descriptive variable names. Prolog atoms are lowercase, Variables Are Propercase, and the compiler cares!. this_is_a_good_atom_name WhileThisIsHowYouWriteVariables. If you can't come up with descriptive variable names, you don't understand the problem and we can't help you.
+
+* Don't ask questions you could have discovered the answers to with minimal searching. Before asking 'Whats the library call to do...' questions, always check the search box on http://www.swi-prolog.org[SWI-Prolog] (Or the website for your version of Prolog), and use http://www.google.com[Google]. Before asking any question, search http://stackoverflow.com[Stack Overflow]. This is _courteous_ (it doesn't
+waste our time), and will help you think _clearly_ about the question.
+
+* Don't ask questions that clearly indicate you haven't read the textbook. We don't mind if you're confused - Prolog's mind warping! But you need to make a *reasonable effort* to understand the material _first_, not use us for not having wanted to show up for that 8am CS 302 class.
+Reasonable: I read the chapter on 'cut' and completely don't get it. Unreasonable: What's this exclamation point?
+
+* Don't ask for help setting up complex development environments when you're a student and only will be writing 50 line programs. SWI-Prolog has a built-in editor that's entirely adequate. We're not going to help you get swipl running on Netbeans on a Mac, even if NetBeans *is* the only editor you've ever seen.
+
+Courteous
+~~~~~~~~~
+
+* Don't ask permission to ask.  The whole point of the channel is to ask and answer questions about Prolog.
+
+* Do not demand instant answers.  You will not get such answers unless you're very lucky.  (Practical upshot of this: don't leave your homework for the last second.)  
+Ask your question and then wait, patiently, for the answer.  This could take time, partially because it's a slow-moving channel and partially because the person 
+who can answer your specific question may not be looking right now.  Just because there is channel activity doesn't mean people who know your answer are on now.
+Indeed, it may even be a day or two, especially if you're crossing the weekend, before you get an answer of any kind or your question is about an obscure part of
+the language.
+
+* As a corollary to this, you will not motivate people to help you if you ask a question, repeat it a dozen times, then storm off in a snit with a sarcastic quip about how helpful people are being.  We do not exist to serve you.  We don't mind helping, but we do mind being taken for granted.
+
+* Don't ask questions of the form "how do I..." followed by your class assignment, copy/pasted direct, complete with assignment number. We enjoy doing your homework, after all. Your professors, who probably read the channel, enjoy other people doing your homework for you as well.
+
+* Our purpose on earth is *not* to make up for your instructor's failings. You're paying for a class, ask the guy/gal getting paid.
+
+* Have a sense of proportion. Having never used Prolog before, don't announce you're doing some obviously deep hackery like porting SWI-Prolog onto the JVM, and then ask for our help.
+
+* Don't brag how you're going to make a human level AI program. Don't come in and ask beginner questions while being secretive about what you're doing. Most of us work in or around AI. You're not fooling us. AI researchers know Prolog already.
+
+* Don't tell us how Python/Java/Cobol/etc is so much better. We're mostly language geeks and love discussing the pros and cons of various languages, including Prolog, but
+expressing your low opinion of Prolog and loudly bemoaning being forced to understand it won't convince us you've got the broad and searching mind we're looking for.
+
+* Don't make crude jokes, have an offensive nick, or generally be somebody we wouldn't want to share time with. That won't convince us of the broad and searching thing either. Sexist humor/remarks won't fly. 
+
+Which Prolog To Use
+-------------------
+
+I recommend http://www.swi-prolog.org[SWI-Prolog]. 
+There are many good things to be said about other implementations of Prolog. Some are faster in some circumstances, have nice constraint libraries, or other attractive features, but you won't be using any of those things as a beginning student. 
+Installation on windows and mac is simple, there are http://www.swi-prolog.org/download/stable[installers for mac and windows and packages for most linux distros].
+
+SWI-Prolog has a built in IDE with a graphical debugger and syntax coloring editor. 
+
+Further, it's the most popular Prolog for commercial and research use, so the person you're talking to probably can answer questions about SWI more easily.
+
+Bias warning - one of the authors of this FAQ is a peripheral contributor to SWI-Prolog.
+
+Hello World
+-----------
+
+An old tradition in computing is to write a program that prints 'hello world' when one starts using a new language.
+Here's how to do it in SWI-Prolog.
+
+On Windows
+~~~~~~~~~~
+
+Right click in the file browser and make a new text document.
+
+image:filebrowsertext.png[fire browser]
+
+Rename the document helloworld.pl  It should give a warning, and if you say go ahead and change, it will change the icon to an orange owl.
+
+image:filebrowserpl.png[pl file]
+
+Double click on the document.  SWI-Prolog should start up and show you a console like this
+
+image:console.png[the console]
+
+The ?- prompt is called a 'top level' prompt. In Prolog we have facts and rules in files that we consult. 
+Then we make queries about our database by typing them in at the 'top level'.
+
+Query 
+
+----
+?-edit.
+----
+
+That means "type e then d then i then t then a period then a newline into the console"
+
+The pceEmacs editor pops up in a new window. This editor is a clone of emacs.
+
+Type your first program into the editor.
+
+----
+hello_world :-
+     write('hello world'),
+     nl.
+----
+
+Type ctrl-x ctrl-s to save your program.
+
+type ctrl-c ctrl-m to 'make' your program.
+
+Making the program alters the database by adding a new rule, one that defines whether hello_world is true (it is),
+and as a side effect prints out 'hello world'.
+
+Now ask Prolog if hello_world is true by querying 
+
+----
+?- hello_world.
+----
+
+and it prints hello world on the console and assures you that it's indeed true.
+
+On Linux or Mac
+~~~~~~~~~~~~~~~
+
+These directions are for linux. Mac is similar.
+
+In a terminal
+
+----
+touch helloworld.pl
+swipl -s helloworld.pl
+----
+
+SWI-Prolog should start up and show you a console like this
+
+----
+TBD - need linux banner
+----
+
+The ?- prompt is called a 'top level' prompt. In Prolog we have facts and rules in files that we consult. 
+Then we make queries about our database by typing into the top level.
+
+Query 
+
+----
+?-edit.
+----
+
+That means "type e then d then i then t then a period then a newline into the terminal"
+
+The pceEmacs editor pops up in a new X window. This editor is a clone of emacs.
+
+Type your first program into the editor.
+
+----
+hello_world :-
+     write('hello world'),
+     nl.
+----
+
+Type ctrl-x ctrl-s to save your program.
+
+type ctrl-c ctrl-m to 'make' your program.
+
+Making the program alters the database by adding a new rule, one that defines whether hello_world is true (it is),
+and as a side effect prints out 'hello world'.
+
+Now ask Prolog if hello_world is true by querying 
+
+----
+?- hello_world.
+----
+
+and it prints hello world on the console and assures you that it's indeed true.
+
+Why can't I type in code at the repl?
+-------------------------------------
+
+That's not a repl, that's a top level. You're typing in queries. Type code into a file.
+If you do want to enter code from the top level, you can use assert:
+
+----
+?- assert((mypred(X) :- write(>>>),writeln(X))).
+----
+
+Note the extra parens.
+
+Prolog Hung
+-----------
+
+SWI-Prolog's pretty reliable. Here's ways to hang it:
+
+----
+
+14 ?- assert(mep(7)).
+true.
+
+15 ?- assert(mep(3)).
+true.
+
+16 ?- mep(X).
+X = 7     <-- caret is here, blinking, but no new ?-
+----
+
+This is _not_ hung.  Prolog gives you all the solutions. It's offered you 7, and is waiting for
+you to say if you want more.  ; means more.  .  means stop giving me solutions.
+
+----
+16 ?- mep(X).
+X = 7 ;
+X = 3.
+
+17 ?- 
+-----
+
+Here's a program that loops infinitely.
+
+
+----
+bad_count_to_ten(X) :-
+	NX is X + 1,
+	bad_count_to_ten(NX).
+bad_count_to_ten(10).
+----
+
+SWI-Prolog 'hangs' but you can break out with ctrl-C, then answer the Action (h for help) ? with a
+
+A ham handed attempt to fix it
+
+----
+uses_lots_of_memory(X) :-
+	uses_lots_of_memory(NX),
+	NX is X + 1.
+
+uses_lots_of_memory(10).
+----
+
+----
+% c:/docs/prolog/tutorials/faq/faqsample compiled 0.00 sec, 3 clauses
+3 ?- uses_lots_of_memory(1).
+ERROR: Out of local stack
+   Exception: (1,763,388) uses_lots_of_memory(_G1760) ? 
+----
+
+Both are out of control recursion. They call themselves over and over without limit.
+
+How do I find the predicate that does so and so?
+------------------------------------------------
+
+* At http://www.swi-prolog.org/[SWI-Prolog Website] use the search box.
+
+* The search doesn't cover some things. http://www.google.com/[Google] can be a friend.
+
+How can I see what my code is doing?
+-----------------------------------
+
+Query
+
+----
+?- tspy(mypred).
+----
+
+Now when mypred is unified you'll see a nice graphical debugger.
+
+* space steps "in"
+
+* s skips "over"
+
+* l runs until another breakpoint is hit
+
+* a aborts
+
+Query nospy(mypred) to get rid of gthe breakpoint.
+
+Difference between "hello", hello, and \'Howdy!'
+----------------------------------------------
+
+Prolog's infinitely weird. It has no control structures, backs up, doesn't have functions or return, and
+_now_ you're telling me this language doesn't have *STRINGS* for God's sake?
+
+Yup.
+
+"hello"
+~~~~~~~
+
+The first one is a "codes". It's actually syntactic sugar for a list of ascii codes as integers.
+
+----
+15 ?- X = "hello".
+X = [104, 101, 108, 108, 111].
+----
+
+Holy smokes!
+This obviously can be a serious pain to debug. You can get sugar on your output.
+
+----
+23 ?- portray_text(true).
+true.
+
+24 ?- X = "hello".
+X = "hello".      <-- still a list of ascii codes
+----
+
+hello
+~~~~~
+
+This is an atom. Atoms are 'interned' strings. You hear in WWII stories how somebody was shot down over
+neutral territory and 'interned' - stuck there until the war was over. Atoms are for strings you're going
+to move about as whole chunks. As long as they start with lowercase letters, or are made up of all special
+characters, they're atoms.
+
+By convention atoms have all lower names with underscores, i_am_a_good_atom.
+
+\'Howdy!'
+~~~~~~~~
+
+But you can print an atom. What if I want to print my real name?
+
+I want an atom, but I want to put a space in it (normally not allowed) and want an uppercase first letter.
+
+----
+25 ?- writeln('Anne Ogborn').
+Anne Ogborn
+true.
+
+26 ?- 
+----
+
+Anything surrounded by single quotes is an atom, whatever characters are in it.
+
+And yes, atoms are what predicate names are. So
+
+----
+26 ?- assert(('(((('(X) :- writeln(X))).
+true.
+
+27 ?- '(((('('((((').
+((((
+true.
+----
+
+Yup, that's a predicate whose name is four open parens.
+
+
+
+How do I get all the results in a list?
+---------------------------------------
+
+I've written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
+I want all thos solutions in a list.
+
+What you want is http://www.swi-prolog.org/pldoc/doc_for?object=bagof/3[bagof]
+
+----
+1 ?- bagof(A, member(A, [foo, fum, fee]), List).
+List = [foo, fum, fee].
+
+----
+
+Why does bagof sometimes have repeats?
+--------------------------------------
+
+Because Prolog gives back all the proofs of a thing. 
+In the family tree example, someone is a sibling if they have a mother in common, or have a father in common.
+I'm my brother's sibling both because we share a mother and because we share a father. 
+So my brother appears twice in my list of siblings.
+
+setof is like bagof, but removes repeats and sorts the items.
+
+
+The standard recursion pattern
+------------------------------
+
+Many many times one wants to work on a problem a bit at a time. Traversing a list and printing it's elements is
+a typical example.
+
+----
+print_list([]).    % there's nothing more to do with an empty list
+print_list([Head|Tail]) :-
+      writeln(Head),      % do a little bit
+      print_list(Tail).   % do the rest
+----
+
+Can I make real world programs in Prolog?
+-----------------------------------------
+
+Yes. 40% of Australia's stock trading is done via a large Prolog application.
+
+The web server that serves the SWI-Prolog web site is itself written in Prolog.
+
+There are 3D libraries, machine vision libraries, and audio applications in Prolog.
+
+There is a SPARQL server in Prolog.
+
+So why am I doing toy problems in this class?
+---------------------------------------------
+
+That's a very good question. You should ask your instructor (and demand more realistic education
+in Prolog).
+
+So why haven't I heard of Prolog before?
+----------------------------------------
+
+Take your choice:
+
+Sshhh.... it's our little secret.
+
+Why give away your competitive advantage?
+
+Uh, that's classified (search for Prolog help wanted ads)
+
+How do I make a web page in Prolog?
+-----------------------------------
+
+A tutorial on the web framework for SWI-Prolog is link:../html/index.html[here].
+
+WTF, 4 = 2 + 2 fails?
+---------------------
+
+Yes, because you're asking if the term '+'(2,2) can be unified with the term 4.
+It can't. They're different.
+
+All code in Prolog can be treated as data apart from any meaning as programs.  
+Everything is a term.  Some terms are executable.
+
+If you want it to try to perform arithmetic you need 'numeric equals'
+
+Arithmetic equals
+----
+2 ?- 4 =:= 2 + 2.
+true.
+----
+
+Unifies
+----
+3 ?- 4 = 2 + 2.
+false.
+----
+
+is
+
+This is the closest Prolog has to assignment.
+
+Succeeds only if the left side is the number the right side evaluates to.
+
+Normally _is_ is called with an unbound variable on it's left side and an expression on the right.
+
+----
+8 ?- X is 2 + 2.
+X = 4.
+
+% works because sin(pi/2) is indeed 1.0
+9 ?- 1.0 is sin(pi/2).
+true.
+
+% fails because sin always returns a float
+10 ?- 1 is sin(pi/2).
+false.
+----
+
+
+ == is 'Are the same place in the standard order'
+
+These two terms are either two things that aren't variables and are =, or they are variables and they share.
+I'm a fairly experienced Prolog programmer. I just finished ten minutes of mind bending attempt to understand this
+operator. I've never used it. So, as a beginner, you can ignore it. It is _not_ what you want.
+
+----
+6 ?- X = Y.
+X = Y.
+
+7 ?- X == Y.
+false.
+----
+
+So everything returns true or false, right?
+-------------------------------------------
+
+Wrong! Nothing has a return value. If you're coming from Java, it's like everything is void return type.
+
+Instead of a return, Prolog predicates *succeed* or *fail*. If they fail, Prolog backs up, undoing bindings,
+(this is backtracking) until it reaches the last _choice point_. Then it tries again with the next choice.
+
+'true' is an atom, and also a basic predicate that succeeds.
+
+'false' is an atom  but not a predicate.
+
+'fail' is an atom and a basic predicate that fails.
+
+How do I make an if statement?
+------------------------------
+
+There is an operator, ->.  Avoid it as a newbie.  It's not really 'if', it's more like the ?: operator in C++.
+
+Instead, use case based reasoning.
+
+Suppose I want to make a predicate that prints a die roll. But instead of just the number, when it's 2 I want it
+to print 'snake eyes'. In Java it'd be something like
+
+----
+void print_roll(int roll) {
+    if(roll == 2)
+         System.out.writeln("snake eyes");
+    else
+         System.out.writeln(roll);
+    }
+}
+----
+
+In Prolog we can do the same thing by 
+
+----
+print_roll(2) :-
+    writeln('snake eyes').
+print_roll(Roll) :-
+    writeln(Roll).
+----
+
+which looks slicker - each case is handled on it's own. So far it's a pretty minor whoo hoo.
+
+If we have a 2, we can unify with the first head, and print snake eyes.
+Another way to print the dice roll is just to print the number.
+
+This works fine as long as we don't backtrack into print_roll. If we do, then
+it'll find another way to print a roll of 2 - just as a number, which we don't want.
+Put the above in a file, consult it, and query print_roll(2).  When it prints, it'll stop, waiting.
+hit ; to get the next solution.
+
+----
+4 ?- print_roll(2).
+snake eyes
+true ;
+2                <--- Ooops!
+true.
+----
+
+Oops, not supposed to print number 2 as a solution.
+We can fix that.
+
+----
+print_roll(2) :-
+    writeln('snake eyes').
+print_roll(Roll) :-
+    Roll \= 2,
+    writeln(Roll).
+----
+
+That works. 
+
+----
+5 ?- print_roll(2).
+snake eyes
+true ;
+false.
+----
+
+Some bright soul points out that 12 is usually called 'boxcars'.
+OK, we can add that
+
+----
+print_roll(2) :-
+    writeln('snake eyes').
+print_roll(12) :-
+    writeln('boxcars').
+print_roll(Roll) :-
+    Roll \= 2,
+    Roll \= 12,
+    writeln(Roll).
+----
+
+Well, now we have to make sure Roll isn't 2, or 12, and this clearly isn't ideal as we come up with more
+names. At this point the annoying marketing guy in the office lets us know that 4 is "Little Joe from Kokomo".
+
+Enter the cut.  The cut, or !, means 'forget other solutions' - so, if you figure out it's 'Little Joe from Kokomo',
+don't try anything else.
+
+----
+print_roll(2) :-
+    writeln('snake eyes'),!.
+print_roll(4) :-
+    writeln('Little Joe From Kokomo'),!.
+print_roll(12) :-
+    writeln('boxcars'),!.
+print_roll(Roll) :-
+    writeln(Roll).
+----
+
+Great - well, now we're happy with our predicate, and go do other things with our great craps game.
+
+All is good, except we have a few places where it tries to print numbers that aren't die rolls at all.
+Until we get those bugs out, lets just print 'not a dice roll' for those.
+
+----
+print_roll(2) :-
+    writeln('snake eyes'),!.
+print_roll(4) :-
+    writeln('Little Joe From Kokomo'),!.
+print_roll(12) :-
+    writeln('boxcars'),!.
+% do this case next so it's not caught by the catch all
+print_roll(Roll) :-
+    Roll < 2  ... wish I had an or... Roll > 12,
+    writeln('not a roll').
+print_roll(Roll) :-
+    writeln(Roll).
+
+----
+
+Well, at first glance we want an or. But even if we have one we end up with one case that's got some more
+complex logic in it, and we're headed back down the road to heck of those curly brace languages with their
+complicated nested logic.
+But we _really_ have two different cases.
+
+----
+print_roll(2) :-
+    writeln('snake eyes'),!.
+print_roll(4) :-
+    writeln('Little Joe From Kokomo'),!.
+print_roll(12) :-
+    writeln('boxcars'),!.
+% do this case next so it's not caught by the catch all
+print_roll(Roll) :-
+    Roll < 2,
+    writeln('not a roll'),!.
+print_roll(Roll) :-
+    Roll > 12,
+    writeln('not a roll'),!.
+print_roll(Roll) :-
+    writeln(Roll).
+
+----
+
+At the expense of slightly repeating ourselves we're back to the simple cases.
+
+Any complex set of nested ifs can be flattened into this form.
+
+Now, some seedy character may offer you the ->  operator.  It's a way of making a branch within a clause.
+
+*Don't Do This*
+
+----
+print_roll(Roll) :-
+    (   Roll < 2 ->
+        writeln('not a roll')
+    ;
+        writeln(Roll)
+    ).
+----
+
+Noobs come to us with programs like this
+
+----
+print_roll(Roll) :-
+    (   Roll < 2 ->
+        writeln('not a roll')
+    ;
+        (  Roll > 12 ->
+           writeln('not a roll')
+        ; 
+           ( Roll =:= 12 ->
+                writeln('boxcars')
+            ;
+                ( Roll =:= 2 ->
+                     writeln('snake eyes')
+                ;
+                    writeln(Roll)
+                )
+            )
+        )
+    ).
+----
+    
+and wonder why they have bugs... just say *no* to the ->  and ; operators.
+
+(PS, the above has a bug, the 4 case is missing. It might have other bugs as well. Who knows. I'm fairly
+confident the reasonable cases above are correct just by inspection.)
+
+
+How do I make a loop?
+---------------------
+
+Set your throttle to max, go into a slight dive, pull back on the stick, and climb, keeping your airspeed well above stall.
+At the top of the loop cut back on the throttle, keep the stick back, slowly push it forward as you descend.
+
+Oh, probably not...
+
+Actually, there's three ways to do it.
+
+Recursion
+~~~~~~~~~
+
+Replace the loop with recursion. See the 'standard recursion pattern' above.
+
+----
+recursive_countdown(0) :- writeln(0).
+recursive_countdown(X) :-
+	writeln(X),
+	NX is X - 1,
+	recursive_countdown(NX).
+----
+
+Failure Driven Loop
+~~~~~~~~~~~~~~~~~~~
+
+Prolog will backtrack and try again with a different solution. Hey, that's a loop!
+
+Between succeeds when it's 3rd argument is an integer from it's first to it's last.
+
+----
+13 ?- between(1,5,X).
+X = 1 ;
+X = 2 ;
+X = 3 ;
+X = 4 ;
+X = 5.
+----
+
+This predicate is doomed to fail until A reaches 10. 
+
+----
+failure_driven_countdown :-
+	between(0,10,A),
+	N is 10 - A,
+	writeln(N),
+	A = 10.
+----
+
+Which is a good thing in this case. It'll keep trying different values of A, and printing the
+number we want along the way, until A reaches 10.
+
+
