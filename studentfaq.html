@@ -740,10 +740,10 @@ asciidoc.install();
 <div class="sect1">
 <h2 id="_strong_advice_for_students_on_prolog">Strong Advice for Students on ##prolog</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>There are about 100,000 students who take a programming languages class that includes some basic Prolog <strong>each semester</strong> .</p></div>
+<div class="paragraph"><p>There are about 100,000 students <strong>each semester</strong> who take a programming languages class that includes some basic Prolog.</p></div>
 <div class="paragraph"><p>There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.</p></div>
-<div class="paragraph"><p>This means if you discover the great fun and power of Prolog and fall in love with it, we&#8217;ll take you to our breast. BUT&#8230;</p></div>
-<div class="paragraph"><p>In self defense, regular denizens of ##prolog will <strong>definitely ignore you</strong> if you ignore the five C&#8217;s -</p></div>
+<div class="paragraph"><p>The small community means if you discover the great fun and power of Prolog and fall in love with it, we&#8217;ll take you to our breast. BUT&#8230;</p></div>
+<div class="paragraph"><p>In their own self defense, regular denizens of ##prolog will <strong>definitely ignore you</strong> if you ignore the five C&#8217;s -</p></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
 <em>correct</em> 
@@ -766,7 +766,7 @@ asciidoc.install();
 </dt>
 <dd>
 <p>
-  Not a dump of your 2000 line opus. Yes, this is in tension with <em>complete</em>, but you can find the balance.
+  Yes, this is in tension with <em>complete</em>, but you can find the balance.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -811,15 +811,13 @@ If you&#8217;re asking about an implementation detail instead of the goal in an 
 </li>
 <li>
 <p>
-Don&#8217;t come to us with <em>random weird way of doing something simple</em> and instead of taking advice that you want <em>really simple thing</em> insist that we help you with <em>random weird way</em>.  Better than talking about the way, talk about what end result you want; the <strong>why</strong> of your question.  For example, don&#8217;t ask how to do binary bit flipping for Unix file modes when your real question involves how to make a file read-only.
+Don&#8217;t come to us with <em>random weird way of doing something simple</em> and instead of taking advice that you want <em>really simple thing</em> insist that we help you with <em>random weird way</em>.  Goals, not methods (and a little humility).
 </p>
 </li>
 <li>
 <p>
-Don&#8217;t make the bad assumption that Prolog can&#8217;t handle "normal" programming tasks and that you have to wrap it in C++ or Java wrappers
-to do simple I/O or maintain a few data structures. Then get lost in details of the JPL or Prolog-C++ libraries (which are as hairy as
-such low level glue libs usually are), and ask us to fix it. If you really need to do inter-language communication you should know
-Prolog already. If you want to use Prolog as a back end, ask advice in the channel about the best way to go about it.
+Prolog can indeed handle "normal" programming tasks. It is rarely necessary to wrap it in C++ or Java wrappers. Please don&#8217;t show up with a simple Prolog program, struggling with Prolog basics, and expect us to talk you through JPL or C\++ interface libs (which are as hairy as
+such low level glue libs usually are). If you do need to integrate Prolog in an existing system, usually it can be done over sockets, pipes, or other simple alternative. Ask advice in the channel about the best way to go about it.
 </p>
 </li>
 </ul></div>
@@ -887,7 +885,7 @@ waste our time), and will help you think <em>clearly</em> about the question.
 <li>
 <p>
 Don&#8217;t ask questions that clearly indicate you haven&#8217;t read the textbook. We don&#8217;t mind if you&#8217;re confused - Prolog&#8217;s mind warping! But you need to make a <strong>reasonable effort</strong> to understand the material <em>first</em>, not use us for not having wanted to show up for that 8am CS 302 class.
-Reasonable: I read the chapter on <em>cut</em> and completely don&#8217;t get it. Unreasonable: What&#8217;s this exclamation point?
+Reasonable: I read the chapter on <em>cut</em>, read this website tutorial on <em>cut</em>, typed in a bunch of examples, and completely don&#8217;t get how to program if I completely undo my program each time. Unreasonable: What&#8217;s this exclamation point thing?
 </p>
 </li>
 <li>
@@ -902,21 +900,26 @@ Don&#8217;t ask for help setting up complex development environments when you&#8
 <div class="ulist"><ul>
 <li>
 <p>
+We do not exist to serve you.  We don&#8217;t mind helping, but we do mind being taken for granted. Every moment spent
+answering questions is a moment we&#8217;re not coding.
+</p>
+</li>
+<li>
+<p>
 Don&#8217;t ask permission to ask.  The whole point of the channel is to ask and answer questions about Prolog.
 </p>
 </li>
 <li>
 <p>
-Do not demand instant answers.  You will not get such answers unless you&#8217;re very lucky.  (Practical upshot of this: don&#8217;t leave your homework for the last second.)
-Ask your question and then wait, patiently, for the answer.  This could take time, partially because it&#8217;s a slow-moving channel and partially because the person
-who can answer your specific question may not be looking right now.  Just because there is channel activity doesn&#8217;t mean people who know your answer are on now.
-Indeed, it may even be a day or two, especially if you&#8217;re crossing the weekend, before you get an answer of any kind or your question is about an obscure part of
-the language.
+It&#8217;s a slow moving channel. Instant answers are unlikely.  (So don&#8217;t leave your homework for the last second.)
+Ask your question and then wait.  Just because there is channel activity doesn&#8217;t mean people who know your answer are on now.
+If you&#8217;re asking about an obscure part of the language it can take days before someone answers. Check one of the many sites that
+log the channel.
 </p>
 </li>
 <li>
 <p>
-As a corollary to this, you will not motivate people to help you if you ask a question, repeat it a dozen times, then storm off in a snit with a sarcastic quip about how helpful people are being.  We do not exist to serve you.  We don&#8217;t mind helping, but we do mind being taken for granted.
+We heard you the first time. Don&#8217;t spam 43 channels. Don&#8217;t wait 14.8 seconds, then storm off in a snit with a sarcastic quip about how helpful people are being.
 </p>
 </li>
 <li>
@@ -947,11 +950,29 @@ expressing your low opinion of Prolog and loudly bemoaning being forced to under
 </li>
 <li>
 <p>
-Don&#8217;t make crude jokes, have an offensive nick, or generally be somebody we wouldn&#8217;t want to share time with. That won&#8217;t convince us of the broad and searching thing either. Sexist humor/remarks won&#8217;t fly.
+Don&#8217;t make crude jokes, have an offensive nick, or generally be somebody we wouldn&#8217;t want to share time with. That won&#8217;t convince us of the broad and searching thing either. Sexist humor/remarks won&#8217;t fly. If you aren&#8217;t ready for the grownup table, you&#8217;re not ready for ##prolog.
+</p>
+</li>
+<li>
+<p>
+After we spend 30 minutes solving your complex issue, don&#8217;t kill the channel immediately without saying thanks. Maybe our answer only <em>looked</em> right, and you&#8217;ll be back in 10 minutes.
 </p>
 </li>
 </ul></div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_and_a_plea_to_the_regulars">And A Plea To The Regulars</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>If you&#8217;re one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
+I have a plea.</p></div>
+<div class="paragraph"><p>I&#8217;ve seen plenty of misbehavior from students. But I&#8217;ve also seen plenty of regulars answer reasonable, simple
+beginner questions with category theory. If they ask about functions, suspect they mean predicates until otherwise
+proven. I don&#8217;t think you&#8217;re intending to be mean, but when you demonstrate your intellect or highlight a fascinating
+corner of Prolog, in effect you&#8217;re ignoring the poor petitioner.</p></div>
+<div class="paragraph"><p>So I do invite you to consider giving the simple, obvious answer first. It&#8217;s often what the asker needs.</p></div>
+<div class="paragraph"><p>All that out of the way, On to the FAQ</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -993,6 +1014,9 @@ Then we make queries about our database by typing them in at the <em>top level</
 </div></div>
 <div class="paragraph"><p>That means "type e then d then i then t then a period then a newline into the console"</p></div>
 <div class="paragraph"><p>The pceEmacs editor pops up in a new window. This editor is a clone of emacs.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="editor.png" alt="pl file" />
+</span></p></div>
 <div class="paragraph"><p>Type your first program into the editor.</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1020,10 +1044,21 @@ and as a side effect prints out <em>hello world</em>.</p></div>
 <pre><code>touch helloworld.pl
 swipl -s helloworld.pl</code></pre>
 </div></div>
-<div class="paragraph"><p>SWI-Prolog should start up and show you a console like this</p></div>
+<div class="paragraph"><p>SWI-Prolog should start up and look like this</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><code>TBD - need linux banner</code></pre>
+<pre><code>anniepoo@localhost:~$ touch helloworld.pl
+anniepoo@localhost:~$ swipl -s helloworld.pl
+% /home/anniepoo/helloworld.pl compiled 0.00 sec, 1 clauses
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 6.3.15-115-g79fdabe)
+Copyright (c) 1990-2013 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?-   &lt;-- you'll start typing here</code></pre>
 </div></div>
 <div class="paragraph"><p>The ?- prompt is called a <em>top level</em> prompt. In Prolog we have facts and rules in files that we consult.
 Then we make queries about our database by typing into the top level.</p></div>
@@ -1034,6 +1069,9 @@ Then we make queries about our database by typing into the top level.</p></div>
 </div></div>
 <div class="paragraph"><p>That means "type e then d then i then t then a period then a newline into the terminal"</p></div>
 <div class="paragraph"><p>The pceEmacs editor pops up in a new X window. This editor is a clone of emacs.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="editorlinux.png" alt="pl file" />
+</span></p></div>
 <div class="paragraph"><p>Type your first program into the editor.</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1055,15 +1093,47 @@ and as a side effect prints out <em>hello world</em>.</p></div>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_ten_second_syntax_cheat_sheet">Ten Second Syntax Cheat Sheet</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre><code>% comments start with a percent sign
+%% don't double them, you've just set off the doxygen style autodoc thing
+%  pldoc is cool, but you want to know why it's yelling at you about comment syntax
+/*
+you can make C style comments too
+*/
+
+% case is important.  This is not gonna work
+DarnProlog(X) :- blah, blah.
+
+%  editor cheatsheet
+% you can set ctrl-c, ctrl-v shortcuts in the linux editor
+% ctrl-x ctrl-s saves
+% ctrl-c ctrl-m compiles and updates your code.
+
+% Prolog's typeless, usually you don't need to cast.
+
+% output. There's a printf style predicate. Uses ~ not % - fouls me up occasionally
+%  takes two args. First is an atom that's a format string,
+%  second is a list of arguments
+format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
+% pretty much everything else can be handled with twiddle w
+format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_why_can_8217_t_i_type_in_code_at_the_repl">Why can&#8217;t I type in code at the repl?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>That&#8217;s not a repl, that&#8217;s a top level. You&#8217;re typing in queries. Type code into a file.
-If you do want to enter code from the top level, you can use assert:</p></div>
+If you really do want to enter code from the top level, you can use assert:</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>?- assert((mypred(X) :- write(&gt;&gt;&gt;),writeln(X))).</code></pre>
 </div></div>
 <div class="paragraph"><p>Note the extra parens.</p></div>
+<div class="paragraph"><p>But I don&#8217;t recommend it.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1171,7 +1241,7 @@ a aborts
 </div>
 </div>
 <div class="sect1">
-<h2 id="_difference_between_hello_hello_and_howdy">Difference between "hello", hello, and 'Howdy!'</h2>
+<h2 id="_difference_between_hello_hello_howareya_and_howdy">Difference between "hello", hello, HowAreYa, and 'Howdy!'</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Prolog&#8217;s infinitely weird. It has no control structures, backs up, doesn&#8217;t have functions or return, and
 <em>now</em> you&#8217;re telling me this language doesn&#8217;t have <strong>STRINGS</strong> for God&#8217;s sake?</p></div>
@@ -1198,10 +1268,18 @@ X = "hello".      &lt;-- still a list of ascii codes</code></pre>
 <div class="sect2">
 <h3 id="_hello_2">hello</h3>
 <div class="paragraph"><p>This is an atom. Atoms are <em>interned</em> strings. You hear in WWII stories how somebody was shot down over
-neutral territory and <em>interned</em> - stuck there until the war was over. Atoms are for strings you&#8217;re going
-to move about as whole chunks. As long as they start with lowercase letters, or are made up of all special
+neutral territory and <em>interned</em> - stuck there until the war was over.</p></div>
+<div class="paragraph"><p>Same thing here - atoms don&#8217;t change.
+Atoms are for strings you&#8217;re going to move about as whole chunks. Identifiers start with lowercase letters, or are made up of all special
 characters, they&#8217;re atoms.</p></div>
-<div class="paragraph"><p>By convention atoms have all lower names with underscores, i_am_a_good_atom.</p></div>
+<div class="paragraph"><p>By convention atoms have all lower names with underscores between words.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>i_am_a_good_atom
+iAmAnAtomButDontDoThis
+====&gt; is also an atom.
+(     not an atom (part of Prolog's basic syntax)</code></pre>
+</div></div>
 </div>
 <div class="sect2">
 <h3 id="_howdy">'Howdy!'</h3>
@@ -1216,6 +1294,12 @@ true.
 26 ?-</code></pre>
 </div></div>
 <div class="paragraph"><p>Anything surrounded by single quotes is an atom, whatever characters are in it.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>(     not an atom (part of Prolog's basic syntax)
+'('   an atom
+'IAmAnAtom'</code></pre>
+</div></div>
 <div class="paragraph"><p>And yes, atoms are what predicate names are. So</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1228,13 +1312,55 @@ true.</code></pre>
 </div></div>
 <div class="paragraph"><p>Yup, that&#8217;s a predicate whose name is four open parens.</p></div>
 </div>
+<div class="sect2">
+<h3 id="_howareya">HowAreYa</h3>
+<div class="paragraph"><p>That&#8217;s a variable. It&#8217;s a container for data. Variables start with _ (underscore) or an uppercase letter.</p></div>
+<div class="paragraph"><p>An underscore by itself is special - it&#8217;s a variable whose value we don&#8217;t care about.
+Variables that start with an underscore \_AVariable  are also ones we don&#8217;t care about,
+by convention, but Prolog only treats underscore by itself as special.</p></div>
+<div class="paragraph"><p>Me:   "Buy me an Umbrella"</p></div>
+<div class="paragraph"><p>Hubby:  "What color?"</p></div>
+<div class="paragraph"><p>Me:   "I don&#8217;t care."</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>umbrella(_, Umbrella).   % matches an umbrella of any color
+umbrella(Color, sallys_umbrella). % matches with the color of sallys umbrella
+umbrella(_, sallys_umbrella).  % matches if sally *has* an umbrella of any color
+umbrella(red, Umbrella).  % matches only red umbrellas</code></pre>
+</div></div>
+<div class="paragraph"><p>Remember, they kept telling you you&#8217;re not executing instructions, you&#8217;re looking for proofs?</p></div>
+<div class="paragraph"><p>Variables are like variables in high school algebra, not like in C.</p></div>
+<div class="paragraph"><p>High school math problem:</p></div>
+<div class="paragraph"><p>3*X^2 + 4*X + 1 = 0</p></div>
+<div class="paragraph"><p>and you crank for a while and figure out</p></div>
+<div class="paragraph"><p>X = - 1/3  or X = -1</p></div>
+<div class="paragraph"><p>Predicate to find the roots</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>quadratic_roots(A,B,C,X) :-
+        X is  ( - B + sqrt(B * B - 4 * A * C) ) / ( 2 * A).
+quadratic_roots(A,B,C,X) :-
+        X is  ( - B - sqrt(B * B - 4 * A * C) ) / ( 2 * A).</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>4 ?- quadratic_roots(3,4,1,X).
+X = -0.3333333333333333 ;
+X = -1.0.</code></pre>
+</div></div>
+<div class="paragraph"><p>The proof works if X is -0.3333  or -1</p></div>
+<div class="paragraph"><p>A,B,C, and X are variables. A,B, and C are <em>grounded</em> when we call quadratic_roots -
+A&#8217;s 3, we just said so. X, we don&#8217;t know, could be anything.</p></div>
+<div class="paragraph"><p>When we leave quadratic_roots, X is <em>bound</em> - it&#8217;s got a value (-0.33333 in this case).
+It will also bind to -1. But it won&#8217;t bind to -2.0</p></div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_how_do_i_get_all_the_results_in_a_list">How do I get all the results in a list?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>I&#8217;ve written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
-I want all thos solutions in a list.</p></div>
+I want all those solutions in a list.</p></div>
 <div class="paragraph"><p>What you want is <a href="http://www.swi-prolog.org/pldoc/doc_for?object=bagof/3">bagof</a></p></div>
 <div class="listingblock">
 <div class="content">
@@ -1287,9 +1413,23 @@ in Prolog).</p></div>
 <h2 id="_so_why_haven_8217_t_i_heard_of_prolog_before">So why haven&#8217;t I heard of Prolog before?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Take your choice:</p></div>
-<div class="paragraph"><p>Sshhh&#8230;. it&#8217;s our little secret.</p></div>
-<div class="paragraph"><p>Why give away your competitive advantage?</p></div>
-<div class="paragraph"><p>Uh, that&#8217;s classified (search for Prolog help wanted ads)</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Sshhh&#8230;. it&#8217;s our little secret.
+</p>
+</li>
+<li>
+<p>
+Why give away your competitive advantage?
+</p>
+</li>
+<li>
+<p>
+Uh, that&#8217;s classified (search for Prolog help wanted ads to understand this)
+</p>
+</li>
+</ul></div>
 </div>
 </div>
 <div class="sect1">
@@ -1579,7 +1719,7 @@ number we want along the way, until A reaches 10.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-06-09 22:50:40 Pacific Daylight Time
+Last updated 2013-06-11 20:56:22 Pacific Daylight Time
 </div>
 </div>
 </body>

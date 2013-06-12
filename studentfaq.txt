@@ -7,13 +7,13 @@ v0.1  June 2013
 Strong Advice for Students on ##prolog
 --------------------------------------
 
-There are about 100,000 students who take a programming languages class that includes some basic Prolog *each semester* .
+There are about 100,000 students *each semester* who take a programming languages class that includes some basic Prolog.
 
 There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.
 
-This means if you discover the great fun and power of Prolog and fall in love with it, we'll take you to our breast. BUT...
+The small community means if you discover the great fun and power of Prolog and fall in love with it, we'll take you to our breast. BUT...
 
-In self defense, regular denizens of ##prolog will *definitely ignore you* if you ignore the five C's - 
+In their own self defense, regular denizens of ##prolog will *definitely ignore you* if you ignore the five C's - 
 
 _correct_ ::
   Accurately reflects what you really want to know
@@ -22,7 +22,7 @@ _complete_ ::
   We have all the info we need, not just the fragment you're 'sure' is the problem.
   
 _concise_ ::
-  Not a dump of your 2000 line opus. Yes, this is in tension with _complete_, but you can find the balance.
+  Yes, this is in tension with _complete_, but you can find the balance.
   
 _clear_ ::
   Clarify the question in your own mind, then express it with literate English.
@@ -41,12 +41,10 @@ Correct
 
 * If you're asking about an implementation detail instead of the goal in an unfamiliar language, you're almost certainly asking the wrong question.
 
-* Don't come to us with _random weird way of doing something simple_ and instead of taking advice that you want _really simple thing_ insist that we help you with _random weird way_.  Better than talking about the way, talk about what end result you want; the *why* of your question.  For example, don't ask how to do binary bit flipping for Unix file modes when your real question involves how to make a file read-only.
+* Don't come to us with _random weird way of doing something simple_ and instead of taking advice that you want _really simple thing_ insist that we help you with _random weird way_.  Goals, not methods (and a little humility).
 
-* Don't make the bad assumption that Prolog can't handle "normal" programming tasks and that you have to wrap it in C\++ or Java wrappers
-to do simple I/O or maintain a few data structures. Then get lost in details of the JPL or Prolog-C++ libraries (which are as hairy as
-such low level glue libs usually are), and ask us to fix it. If you really need to do inter-language communication you should know
-Prolog already. If you want to use Prolog as a back end, ask advice in the channel about the best way to go about it.
+* Prolog can indeed handle "normal" programming tasks. It is rarely necessary to wrap it in C\++ or Java wrappers. Please don't show up with a simple Prolog program, struggling with Prolog basics, and expect us to talk you through JPL or C\++ interface libs (which are as hairy as
+such low level glue libs usually are). If you do need to integrate Prolog in an existing system, usually it can be done over sockets, pipes, or other simple alternative. Ask advice in the channel about the best way to go about it.
 
 Complete
 ~~~~~~~~
@@ -78,22 +76,24 @@ Clear
 waste our time), and will help you think _clearly_ about the question.
 
 * Don't ask questions that clearly indicate you haven't read the textbook. We don't mind if you're confused - Prolog's mind warping! But you need to make a *reasonable effort* to understand the material _first_, not use us for not having wanted to show up for that 8am CS 302 class.
-Reasonable: I read the chapter on 'cut' and completely don't get it. Unreasonable: What's this exclamation point?
+Reasonable: I read the chapter on 'cut', read this website tutorial on 'cut', typed in a bunch of examples, and completely don't get how to program if I completely undo my program each time. Unreasonable: What's this exclamation point thing?
 
 * Don't ask for help setting up complex development environments when you're a student and only will be writing 50 line programs. SWI-Prolog has a built-in editor that's entirely adequate. We're not going to help you get swipl running on Netbeans on a Mac, even if NetBeans *is* the only editor you've ever seen.
 
 Courteous
 ~~~~~~~~~
 
+* We do not exist to serve you.  We don't mind helping, but we do mind being taken for granted. Every moment spent
+answering questions is a moment we're not coding.
+
 * Don't ask permission to ask.  The whole point of the channel is to ask and answer questions about Prolog.
 
-* Do not demand instant answers.  You will not get such answers unless you're very lucky.  (Practical upshot of this: don't leave your homework for the last second.)  
-Ask your question and then wait, patiently, for the answer.  This could take time, partially because it's a slow-moving channel and partially because the person 
-who can answer your specific question may not be looking right now.  Just because there is channel activity doesn't mean people who know your answer are on now.
-Indeed, it may even be a day or two, especially if you're crossing the weekend, before you get an answer of any kind or your question is about an obscure part of
-the language.
+* It's a slow moving channel. Instant answers are unlikely.  (So don't leave your homework for the last second.)  
+Ask your question and then wait.  Just because there is channel activity doesn't mean people who know your answer are on now.
+If you're asking about an obscure part of the language it can take days before someone answers. Check one of the many sites that
+log the channel.
 
-* As a corollary to this, you will not motivate people to help you if you ask a question, repeat it a dozen times, then storm off in a snit with a sarcastic quip about how helpful people are being.  We do not exist to serve you.  We don't mind helping, but we do mind being taken for granted.
+* We heard you the first time. Don't spam 43 channels. Don't wait 14.8 seconds, then storm off in a snit with a sarcastic quip about how helpful people are being. 
 
 * Don't ask questions of the form "how do I..." followed by your class assignment, copy/pasted direct, complete with assignment number. We enjoy doing your homework, after all. Your professors, who probably read the channel, enjoy other people doing your homework for you as well.
 
@@ -106,7 +106,24 @@ the language.
 * Don't tell us how Python/Java/Cobol/etc is so much better. We're mostly language geeks and love discussing the pros and cons of various languages, including Prolog, but
 expressing your low opinion of Prolog and loudly bemoaning being forced to understand it won't convince us you've got the broad and searching mind we're looking for.
 
-* Don't make crude jokes, have an offensive nick, or generally be somebody we wouldn't want to share time with. That won't convince us of the broad and searching thing either. Sexist humor/remarks won't fly. 
+* Don't make crude jokes, have an offensive nick, or generally be somebody we wouldn't want to share time with. That won't convince us of the broad and searching thing either. Sexist humor/remarks won't fly. If you aren't ready for the grownup table, you're not ready for ##prolog.
+
+* After we spend 30 minutes solving your complex issue, don't kill the channel immediately without saying thanks. Maybe our answer only _looked_ right, and you'll be back in 10 minutes.
+
+And A Plea To The Regulars
+--------------------------
+
+If you're one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
+I have a plea.
+
+I've seen plenty of misbehavior from students. But I've also seen plenty of regulars answer reasonable, simple
+beginner questions with category theory. If they ask about functions, suspect they mean predicates until otherwise
+proven. I don't think you're intending to be mean, but when you demonstrate your intellect or highlight a fascinating
+corner of Prolog, in effect you're ignoring the poor petitioner. 
+
+So I do invite you to consider giving the simple, obvious answer first. It's often what the asker needs.
+
+All that out of the way, On to the FAQ
 
 Which Prolog To Use
 -------------------
@@ -155,6 +172,8 @@ That means "type e then d then i then t then a period then a newline into the co
 
 The pceEmacs editor pops up in a new window. This editor is a clone of emacs.
 
+image:editor.png[pl file]
+
 Type your first program into the editor.
 
 ----
@@ -190,16 +209,28 @@ touch helloworld.pl
 swipl -s helloworld.pl
 ----
 
-SWI-Prolog should start up and show you a console like this
+SWI-Prolog should start up and look like this
 
 ----
-TBD - need linux banner
+anniepoo@localhost:~$ touch helloworld.pl
+anniepoo@localhost:~$ swipl -s helloworld.pl
+% /home/anniepoo/helloworld.pl compiled 0.00 sec, 1 clauses
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 6.3.15-115-g79fdabe)
+Copyright (c) 1990-2013 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?-   <-- you'll start typing here
+
 ----
 
 The ?- prompt is called a 'top level' prompt. In Prolog we have facts and rules in files that we consult. 
 Then we make queries about our database by typing into the top level.
 
-Query 
+Query 
 
 ----
 ?-edit.
@@ -208,6 +239,8 @@ Query
 That means "type e then d then i then t then a period then a newline into the terminal"
 
 The pceEmacs editor pops up in a new X window. This editor is a clone of emacs.
+
+image:editorlinux.png[pl file]
 
 Type your first program into the editor.
 
@@ -232,17 +265,48 @@ Now ask Prolog if hello_world is true by querying
 
 and it prints hello world on the console and assures you that it's indeed true.
 
+Ten Second Syntax Cheat Sheet
+-----------------------------
+
+----
+% comments start with a percent sign
+%% don't double them, you've just set off the doxygen style autodoc thing
+%  pldoc is cool, but you want to know why it's yelling at you about comment syntax
+/*
+you can make C style comments too
+*/
+
+% case is important.  This is not gonna work
+DarnProlog(X) :- blah, blah.
+
+%  editor cheatsheet
+% you can set ctrl-c, ctrl-v shortcuts in the linux editor 
+% ctrl-x ctrl-s saves
+% ctrl-c ctrl-m compiles and updates your code.
+
+% Prolog's typeless, usually you don't need to cast.
+
+% output. There's a printf style predicate. Uses ~ not % - fouls me up occasionally
+%  takes two args. First is an atom that's a format string, 
+%  second is a list of arguments
+format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
+% pretty much everything else can be handled with twiddle w
+format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).
+----
+
 Why can't I type in code at the repl?
 -------------------------------------
 
 That's not a repl, that's a top level. You're typing in queries. Type code into a file.
-If you do want to enter code from the top level, you can use assert:
+If you really do want to enter code from the top level, you can use assert:
 
 ----
 ?- assert((mypred(X) :- write(>>>),writeln(X))).
 ----
 
 Note the extra parens.
+
+But I don't recommend it.
 
 Prolog Hung
 -----------
@@ -331,8 +395,8 @@ Now when mypred is unified you'll see a nice graphical debugger.
 
 Query nospy(mypred) to get rid of gthe breakpoint.
 
-Difference between "hello", hello, and \'Howdy!'
-----------------------------------------------
+Difference between "hello", hello, HowAreYa, and \'Howdy!'
+---------------------------------------------------------
 
 Prolog's infinitely weird. It has no control structures, backs up, doesn't have functions or return, and
 _now_ you're telling me this language doesn't have *STRINGS* for God's sake?
@@ -364,11 +428,20 @@ hello
 ~~~~~
 
 This is an atom. Atoms are 'interned' strings. You hear in WWII stories how somebody was shot down over
-neutral territory and 'interned' - stuck there until the war was over. Atoms are for strings you're going
-to move about as whole chunks. As long as they start with lowercase letters, or are made up of all special
+neutral territory and 'interned' - stuck there until the war was over. 
+
+Same thing here - atoms don't change.
+Atoms are for strings you're going to move about as whole chunks. Identifiers start with lowercase letters, or are made up of all special
 characters, they're atoms.
 
-By convention atoms have all lower names with underscores, i_am_a_good_atom.
+By convention atoms have all lower names with underscores between words.
+
+----
+i_am_a_good_atom
+iAmAnAtomButDontDoThis
+====> is also an atom.
+(     not an atom (part of Prolog's basic syntax)
+----
 
 \'Howdy!'
 ~~~~~~~~
@@ -387,6 +460,12 @@ true.
 
 Anything surrounded by single quotes is an atom, whatever characters are in it.
 
+----
+(     not an atom (part of Prolog's basic syntax)
+'('   an atom
+'IAmAnAtom'
+----
+
 And yes, atoms are what predicate names are. So
 
 ----
@@ -400,13 +479,69 @@ true.
 
 Yup, that's a predicate whose name is four open parens.
 
+HowAreYa
+~~~~~~~~
+
+That's a variable. It's a container for data. Variables start with _ (underscore) or an uppercase letter.
+
+An underscore by itself is special - it's a variable whose value we don't care about.
+Variables that start with an underscore \_AVariable  are also ones we don't care about,
+by convention, but Prolog only treats underscore by itself as special.
+
+Me:   "Buy me an Umbrella"
+
+Hubby:  "What color?"
+
+Me:   "I don't care."
+
+----
+umbrella(_, Umbrella).   % matches an umbrella of any color
+umbrella(Color, sallys_umbrella). % matches with the color of sallys umbrella
+umbrella(_, sallys_umbrella).  % matches if sally *has* an umbrella of any color
+umbrella(red, Umbrella).  % matches only red umbrellas
+----
+
+Remember, they kept telling you you're not executing instructions, you're looking for proofs?
+
+Variables are like variables in high school algebra, not like in C.
+
+High school math problem:
+
+3*X^2 + 4*X + 1 = 0
+
+and you crank for a while and figure out 
+
+X = - 1/3  or X = -1
+
+Predicate to find the roots
+
+----
+quadratic_roots(A,B,C,X) :-
+	X is  ( - B + sqrt(B * B - 4 * A * C) ) / ( 2 * A).
+quadratic_roots(A,B,C,X) :-
+	X is  ( - B - sqrt(B * B - 4 * A * C) ) / ( 2 * A).
+----
+
+----
+4 ?- quadratic_roots(3,4,1,X).
+X = -0.3333333333333333 ;
+X = -1.0.
+----
+
+The proof works if X is -0.3333  or -1
+
+A,B,C, and X are variables. A,B, and C are 'grounded' when we call quadratic_roots - 
+A's 3, we just said so. X, we don't know, could be anything.
+
+When we leave quadratic_roots, X is 'bound' - it's got a value (-0.33333 in this case).
+It will also bind to -1. But it won't bind to -2.0
 
 
 How do I get all the results in a list?
 ---------------------------------------
 
 I've written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
-I want all thos solutions in a list.
+I want all those solutions in a list.
 
 What you want is http://www.swi-prolog.org/pldoc/doc_for?object=bagof/3[bagof]
 
@@ -462,11 +597,11 @@ So why haven't I heard of Prolog before?
 
 Take your choice:
 
-Sshhh.... it's our little secret.
+* Sshhh.... it's our little secret.
 
-Why give away your competitive advantage?
+* Why give away your competitive advantage?
 
-Uh, that's classified (search for Prolog help wanted ads)
+* Uh, that's classified (search for Prolog help wanted ads to understand this)
 
 How do I make a web page in Prolog?
 -----------------------------------
@@ -786,5 +921,4 @@ failure_driven_countdown :-
 
 Which is a good thing in this case. It'll keep trying different values of A, and printing the
 number we want along the way, until A reaches 10.
-
 
