@@ -3,6 +3,7 @@
 Anne Ogborn <aogborn@uh.edu>
 v0.1  June 2013
 
+link:../index.html[Home]
 
 Strong Advice for Students on ##prolog
 --------------------------------------
@@ -46,6 +47,8 @@ Correct
 * Prolog can indeed handle "normal" programming tasks. It is rarely necessary to wrap it in C\++ or Java wrappers. Please don't show up with a simple Prolog program, struggling with Prolog basics, and expect us to talk you through JPL or C\++ interface libs (which are as hairy as
 such low level glue libs usually are). If you do need to integrate Prolog in an existing system, usually it can be done over sockets, pipes, or other simple alternative. Ask advice in the channel about the best way to go about it.
 
+* Don't ask for help setting up complex development environments when you're a student and only will be writing 50 line programs. SWI-Prolog has a built-in editor that's entirely adequate. We're not going to help you get swipl running on Netbeans on a Mac, even if NetBeans *is* the only editor you've ever seen.
+
 Complete
 ~~~~~~~~
 
@@ -78,7 +81,6 @@ waste our time), and will help you think _clearly_ about the question.
 * Don't ask questions that clearly indicate you haven't read the textbook. We don't mind if you're confused - Prolog's mind warping! But you need to make a *reasonable effort* to understand the material _first_, not use us for not having wanted to show up for that 8am CS 302 class.
 Reasonable: I read the chapter on 'cut', read this website tutorial on 'cut', typed in a bunch of examples, and completely don't get how to program if I completely undo my program each time. Unreasonable: What's this exclamation point thing?
 
-* Don't ask for help setting up complex development environments when you're a student and only will be writing 50 line programs. SWI-Prolog has a built-in editor that's entirely adequate. We're not going to help you get swipl running on Netbeans on a Mac, even if NetBeans *is* the only editor you've ever seen.
 
 Courteous
 ~~~~~~~~~
@@ -101,7 +103,8 @@ log the channel.
 
 * Have a sense of proportion. Having never used Prolog before, don't announce you're doing some obviously deep hackery like porting SWI-Prolog onto the JVM, and then ask for our help.
 
-* Don't brag how you're going to make a human level AI program. Don't come in and ask beginner questions while being secretive about what you're doing. Most of us work in or around AI. You're not fooling us. AI researchers know Prolog already.
+* Don't brag how you're going to make a human level AI program. Don't come in and ask beginner questions while being secretive about what you're doing
+like it's some top secret thing. Most of us work in or around AI. You're not fooling us. AI researchers know Prolog already.
 
 * Don't tell us how Python/Java/Cobol/etc is so much better. We're mostly language geeks and love discussing the pros and cons of various languages, including Prolog, but
 expressing your low opinion of Prolog and loudly bemoaning being forced to understand it won't convince us you've got the broad and searching mind we're looking for.
