@@ -1722,32 +1722,36 @@ number we want along the way, until A reaches 10.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_sum_something_up">How do I sum something up?</h2>
+<h2 id="_how_do_i_sum_something_up_how_to_i_return_if_everything_8217_s_void">How do I sum something up?  How to I return if everything&#8217;s void?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This is an example of how to pass things up and down the recursion stack.</p></div>
 <div class="paragraph"><p>Say you have some numbers in a list. You want to mod them with 12 and add them.</p></div>
+<div class="paragraph"><p>Takes a list in and binds Sum to the sum of the lists elements mod 12</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><code>% takes a list in and binds Sum to the sum of the lists elements mod 12
-sum_of_modded(List, Sum) :-
-   sum_of_modded_(List, 0, Sum).
-
-% takes a list and a starting value in, and binds Sum to the sum of the lists elements mod 12
-% adding an _ at end of name is common for 'helper' predicates
-% first clause. We define what happens if the list is empty
-% well, if list is empty, reasonably the sum is just the start value
-sum_of_modded_([], Start, Start).
-
-% second clause, for case where we have at least one element
-% notice that we're leaving Sum alone. Thinking Logically,
-% Sum is bound by the recursive call. Thinking procedurally,
-% Sum will be bound when the recursion hits the bottom and the first
-% clause unifies
-sum_of_modded_([Head | Tail], Start, Sum) :-
-     NewStart is Start + Head mod 12,
-         sum_of_modded(Tail, NewStart, Sum).</code></pre>
+<pre><code>sum_of_modded(List, Sum) :-
+   sum_of_modded_(List, 0, Sum).</code></pre>
 </div></div>
-<div class="paragraph"><p>This pattern is very common. It happens not jsut with lists, but with anything you&#8217;d process sequentially,
+<div class="paragraph"><p>takes a list and a starting value in, and binds Sum to the sum of the lists elements mod 12
+adding an _ at end of name is common for <em>helper</em> predicates like this.
+If list is empty, reasonably the sum is just the start value.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>sum_of_modded_([], Start, Start).</code></pre>
+</div></div>
+<div class="paragraph"><p>second clause, for case where we have at least one element.</p></div>
+<div class="paragraph"><p>=| [Head | Tail] |= only unifies if we have at least one element.</p></div>
+<div class="paragraph"><p>notice that we&#8217;re leaving Sum alone. Thinking Logically,
+Sum is bound by the recursive call. Thinking procedurally,
+Sum will be bound when the recursion hits the bottom and the first
+clause unifies</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>sum_of_modded_([Head | Tail], Start, Sum) :-
+        NewStart is Start + Head mod 12,
+        sum_of_modded(Tail, NewStart, Sum).</code></pre>
+</div></div>
+<div class="paragraph"><p>This pattern is very common. It happens not just with lists, but with anything you&#8217;d process sequentially,
 like reading lines from a file and summing them, or summing some power series.</p></div>
 </div>
 </div>
@@ -1755,7 +1759,7 @@ like reading lines from a file and summing them, or summing some power series.</
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-04 15:41:45 Pacific Daylight Time
+Last updated 2014-04-04 16:00:18 Pacific Daylight Time
 </div>
 </div>
 </body>
