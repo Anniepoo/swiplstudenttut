@@ -944,7 +944,8 @@ Have a sense of proportion. Having never used Prolog before, don&#8217;t announc
 </li>
 <li>
 <p>
-Don&#8217;t brag how you&#8217;re going to make a human level AI program. Don&#8217;t come in and ask beginner questions while being secretive about what you&#8217;re doing. Most of us work in or around AI. You&#8217;re not fooling us. AI researchers know Prolog already.
+Don&#8217;t brag how you&#8217;re going to make a human level AI program. Don&#8217;t come in and ask beginner questions while being secretive about what you&#8217;re doing
+like it&#8217;s some top secret thing. Most of us work in or around AI. You&#8217;re not fooling us. AI researchers know Prolog already.
 </p>
 </li>
 <li>
@@ -1720,11 +1721,41 @@ number we want along the way, until A reaches 10.</p></div>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_how_do_i_sum_something_up">How do I sum something up?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This is an example of how to pass things up and down the recursion stack.</p></div>
+<div class="paragraph"><p>Say you have some numbers in a list. You want to mod them with 12 and add them.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>% takes a list in and binds Sum to the sum of the lists elements mod 12
+sum_of_modded(List, Sum) :-
+   sum_of_modded_(List, 0, Sum).
+
+% takes a list and a starting value in, and binds Sum to the sum of the lists elements mod 12
+% adding an _ at end of name is common for 'helper' predicates
+% first clause. We define what happens if the list is empty
+% well, if list is empty, reasonably the sum is just the start value
+sum_of_modded_([], Start, Start).
+
+% second clause, for case where we have at least one element
+% notice that we're leaving Sum alone. Thinking Logically,
+% Sum is bound by the recursive call. Thinking procedurally,
+% Sum will be bound when the recursion hits the bottom and the first
+% clause unifies
+sum_of_modded_([Head | Tail], Start, Sum) :-
+     NewStart is Start + Head mod 12,
+         sum_of_modded(Tail, NewStart, Sum).</code></pre>
+</div></div>
+<div class="paragraph"><p>This pattern is very common. It happens not jsut with lists, but with anything you&#8217;d process sequentially,
+like reading lines from a file and summing them, or summing some power series.</p></div>
+</div>
+</div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-06-11 23:26:47 Pacific Daylight Time
+Last updated 2014-04-04 15:41:45 Pacific Daylight Time
 </div>
 </div>
 </body>
