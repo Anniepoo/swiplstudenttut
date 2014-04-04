@@ -740,10 +740,117 @@ asciidoc.install();
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph"><p><a href="../index.html">Home</a></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#strong_advice">Strong Advice for Students on ##prolog</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#regulars">And A Plea To The Regulars</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#which">Which Prolog To Use</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#hello">Hello World on Various OSes</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#cheat">Ten Second Syntax Cheat Sheet</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#not_repl">Why can&#8217;t I type in code at the repl?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#hung">Prolog Hung</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#find_help">How do I find the predicate that does so and so?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#debug">How can I see what my code is doing?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#howdy">Difference between "hello"</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#list">How do I get all the results in a list?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#recursion">The standard recursion pattern</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#real_world">Can I make real world programs in Prolog?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#toy">So why am I doing toy problems in this class?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#heard">So why haven&#8217;t I heard of Prolog before?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#web">How do I make a web page in Prolog?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#wtf">WTF</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#return">So everything returns true or false</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#if">How do I make an if statement?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#loop">How do I make a loop?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#args">How do I return if everything&#8217;s void?</a>
+</p>
+</li>
+</ul></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_strong_advice_for_students_on_prolog">Strong Advice for Students on ##prolog</h2>
+<h2 id="strong_advice">Strong Advice for Students on ##prolog</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>There are about 100,000 students <strong>each semester</strong> who take a programming languages class that includes some basic Prolog.</p></div>
 <div class="paragraph"><p>There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.</p></div>
@@ -969,7 +1076,7 @@ After we spend 30 minutes solving your complex issue, don&#8217;t kill the chann
 </div>
 </div>
 <div class="sect1">
-<h2 id="_and_a_plea_to_the_regulars">And A Plea To The Regulars</h2>
+<h2 id="regulars">And A Plea To The Regulars</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>If you&#8217;re one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
 I have a plea.</p></div>
@@ -982,7 +1089,7 @@ corner of Prolog, in effect you&#8217;re ignoring the poor petitioner.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_which_prolog_to_use">Which Prolog To Use</h2>
+<h2 id="which">Which Prolog To Use</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>I recommend <a href="http://www.swi-prolog.org">SWI-Prolog</a>.
 There are many good things to be said about other implementations of Prolog. Some are faster in some circumstances, have nice constraint libraries, or other attractive features, but you won&#8217;t be using any of those things as a beginning student.
@@ -993,7 +1100,7 @@ Installation on windows and mac is simple, there are <a href="http://www.swi-pro
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World</h2>
+<h2 id="hello">Hello World</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>An old tradition in computing is to write a program that prints <em>hello world</em> when one starts using a new language.
 Here&#8217;s how to do it in SWI-Prolog.</p></div>
@@ -1099,7 +1206,7 @@ and as a side effect prints out <em>hello world</em>.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ten_second_syntax_cheat_sheet">Ten Second Syntax Cheat Sheet</h2>
+<h2 id="cheat">Ten Second Syntax Cheat Sheet</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -1130,7 +1237,7 @@ format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list
 </div>
 </div>
 <div class="sect1">
-<h2 id="_why_can_8217_t_i_type_in_code_at_the_repl">Why can&#8217;t I type in code at the repl?</h2>
+<h2 id="not_repl">Why can&#8217;t I type in code at the repl?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>That&#8217;s not a repl, that&#8217;s a top level. You&#8217;re typing in queries. Type code into a file.
 If you really do want to enter code from the top level, you can use assert:</p></div>
@@ -1143,7 +1250,7 @@ If you really do want to enter code from the top level, you can use assert:</p><
 </div>
 </div>
 <div class="sect1">
-<h2 id="_prolog_hung">Prolog Hung</h2>
+<h2 id="hung">Prolog Hung</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>SWI-Prolog&#8217;s pretty reliable. Here&#8217;s ways to hang it:</p></div>
 <div class="listingblock">
@@ -1196,7 +1303,7 @@ ERROR: Out of local stack
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_find_the_predicate_that_does_so_and_so">How do I find the predicate that does so and so?</h2>
+<h2 id="find_help">How do I find the predicate that does so and so?</h2>
 <div class="sectionbody">
 <div class="ulist"><ul>
 <li>
@@ -1213,7 +1320,7 @@ The search doesn&#8217;t cover some things. <a href="http://www.google.com/">Goo
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_can_i_see_what_my_code_is_doing">How can I see what my code is doing?</h2>
+<h2 id="debug">How can I see what my code is doing?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Query</p></div>
 <div class="listingblock">
@@ -1247,7 +1354,7 @@ a aborts
 </div>
 </div>
 <div class="sect1">
-<h2 id="_difference_between_hello_hello_howareya_and_howdy">Difference between "hello", hello, HowAreYa, and 'Howdy!'</h2>
+<h2 id="howdy">Difference between "hello", hello, HowAreYa, and 'Howdy!'</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Prolog&#8217;s infinitely weird. It has no control structures, backs up, doesn&#8217;t have functions or return, and
 <em>now</em> you&#8217;re telling me this language doesn&#8217;t have <strong>STRINGS</strong> for God&#8217;s sake?</p></div>
@@ -1363,7 +1470,7 @@ It will also bind to -1. But it won&#8217;t bind to -2.0</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_get_all_the_results_in_a_list">How do I get all the results in a list?</h2>
+<h2 id="list">How do I get all the results in a list?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>I&#8217;ve written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
 I want all those solutions in a list.</p></div>
@@ -1373,11 +1480,8 @@ I want all those solutions in a list.</p></div>
 <pre><code>1 ?- bagof(A, member(A, [foo, fum, fee]), List).
 List = [foo, fum, fee].</code></pre>
 </div></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_why_does_bagof_sometimes_have_repeats">Why does bagof sometimes have repeats?</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_why_does_bagof_sometimes_have_repeats">Why does bagof sometimes have repeats?</h3>
 <div class="paragraph"><p>Because Prolog gives back all the proofs of a thing.
 In the family tree example, someone is a sibling if they have a mother in common, or have a father in common.
 I&#8217;m my brother&#8217;s sibling both because we share a mother and because we share a father.
@@ -1385,8 +1489,9 @@ So my brother appears twice in my list of siblings.</p></div>
 <div class="paragraph"><p>setof is like bagof, but removes repeats and sorts the items.</p></div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_the_standard_recursion_pattern">The standard recursion pattern</h2>
+<h2 id="recursion">The standard recursion pattern</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Many many times one wants to work on a problem a bit at a time. Traversing a list and printing it&#8217;s elements is
 a typical example.</p></div>
@@ -1400,7 +1505,7 @@ print_list([Head|Tail]) :-
 </div>
 </div>
 <div class="sect1">
-<h2 id="_can_i_make_real_world_programs_in_prolog">Can I make real world programs in Prolog?</h2>
+<h2 id="real_world">Can I make real world programs in Prolog?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Yes. 40% of Australia&#8217;s stock trading is done via a large Prolog application.</p></div>
 <div class="paragraph"><p>The web server that serves the SWI-Prolog web site is itself written in Prolog.</p></div>
@@ -1409,14 +1514,14 @@ print_list([Head|Tail]) :-
 </div>
 </div>
 <div class="sect1">
-<h2 id="_so_why_am_i_doing_toy_problems_in_this_class">So why am I doing toy problems in this class?</h2>
+<h2 id="toy">So why am I doing toy problems in this class?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>That&#8217;s a very good question. You should ask your instructor (and demand more realistic education
 in Prolog).</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_so_why_haven_8217_t_i_heard_of_prolog_before">So why haven&#8217;t I heard of Prolog before?</h2>
+<h2 id="heard">So why haven&#8217;t I heard of Prolog before?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Take your choice:</p></div>
 <div class="ulist"><ul>
@@ -1439,13 +1544,13 @@ Uh, that&#8217;s classified (search for Prolog help wanted ads to understand thi
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_make_a_web_page_in_prolog">How do I make a web page in Prolog?</h2>
+<h2 id="web">How do I make a web page in Prolog?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>A tutorial on the web framework for SWI-Prolog is <a href="../html/index.html">here</a>.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wtf_4_2_2_fails">WTF, 4 = 2 + 2 fails?</h2>
+<h2 id="wtf">WTF, 4 = 2 + 2 fails?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Yes, because you&#8217;re asking if the term <em>+</em>(2,2) can be unified with the term 4.
 It can&#8217;t. They&#8217;re different.</p></div>
@@ -1499,7 +1604,7 @@ false.</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_so_everything_returns_true_or_false_right">So everything returns true or false, right?</h2>
+<h2 id="return">So everything returns true or false, right?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Wrong! Nothing has a return value. If you&#8217;re coming from Java, it&#8217;s like everything is void return type.</p></div>
 <div class="paragraph"><p>Instead of a return, Prolog predicates <strong>succeed</strong> or <strong>fail</strong>. If they fail, Prolog backs up, undoing bindings,
@@ -1510,7 +1615,7 @@ false.</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_make_an_if_statement">How do I make an if statement?</h2>
+<h2 id="if">How do I make an if statement?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>There is an operator, &#8594;.  Avoid it as a newbie.  It&#8217;s not really <em>if</em>, it&#8217;s more like the ?: operator in C++.</p></div>
 <div class="paragraph"><p>Instead, use case based reasoning.</p></div>
@@ -1676,7 +1781,7 @@ confident the reasonable cases above are correct just by inspection.)</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_make_a_loop">How do I make a loop?</h2>
+<h2 id="loop">How do I make a loop?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Set your throttle to max, go into a slight dive, pull back on the stick, and climb, keeping your airspeed well above stall.
 At the top of the loop cut back on the throttle, keep the stick back, slowly push it forward as you descend.</p></div>
@@ -1722,7 +1827,7 @@ number we want along the way, until A reaches 10.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_sum_something_up_how_to_i_return_if_everything_8217_s_void">How do I sum something up?  How to I return if everything&#8217;s void?</h2>
+<h2 id="args">How do I return if everything&#8217;s void?</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This is an example of how to pass things up and down the recursion stack.</p></div>
 <div class="paragraph"><p>Say you have some numbers in a list. You want to mod them with 12 and add them.</p></div>
@@ -1740,7 +1845,7 @@ If list is empty, reasonably the sum is just the start value.</p></div>
 <pre><code>sum_of_modded_([], Start, Start).</code></pre>
 </div></div>
 <div class="paragraph"><p>second clause, for case where we have at least one element.</p></div>
-<div class="paragraph"><p>=| [Head | Tail] |= only unifies if we have at least one element.</p></div>
+<div class="paragraph"><p><code>[Head | Tail]</code> only unifies if we have at least one element.</p></div>
 <div class="paragraph"><p>notice that we&#8217;re leaving Sum alone. Thinking Logically,
 Sum is bound by the recursive call. Thinking procedurally,
 Sum will be bound when the recursion hits the bottom and the first
@@ -1759,7 +1864,7 @@ like reading lines from a file and summing them, or summing some power series.</
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-04 16:00:18 Pacific Daylight Time
+Last updated 2014-04-04 16:32:46 Pacific Daylight Time
 </div>
 </div>
 </body>

@@ -5,6 +5,29 @@ v0.1  June 2013
 
 link:../index.html[Home]
 
+* <<strong_advice, Strong Advice for Students on ##prolog>>
+* <<regulars, And A Plea To The Regulars>>
+* <<which, Which Prolog To Use>>
+* <<hello, Hello World on Various OSes>>
+* <<cheat, Ten Second Syntax Cheat Sheet>>
+* <<not_repl, Why can't I type in code at the repl?>>
+* <<hung, Prolog Hung>>
+* <<find_help, How do I find the predicate that does so and so?>>
+* <<debug, How can I see what my code is doing?>>
+* <<howdy, Difference between "hello", hello, HowAreYa, and \'Howdy!'>>
+* <<list, How do I get all the results in a list?>>
+* <<recursion, The standard recursion pattern>>
+* <<real_world, Can I make real world programs in Prolog?>>
+* <<toy, So why am I doing toy problems in this class?>>
+* <<heard, So why haven't I heard of Prolog before?>>
+* <<web, How do I make a web page in Prolog?>>
+* <<wtf, WTF? 4 = 2 + 2 fails?>>
+* <<return, So everything returns true or false, right?>>
+* <<if, How do I make an if statement?>>
+* <<loop, How do I make a loop?>>
+* <<args, How do I return if everything's void?>>
+
+[[strong_advice]]
 Strong Advice for Students on ##prolog
 --------------------------------------
 
@@ -113,6 +136,7 @@ expressing your low opinion of Prolog and loudly bemoaning being forced to under
 
 * After we spend 30 minutes solving your complex issue, don't kill the channel immediately without saying thanks. Maybe our answer only _looked_ right, and you'll be back in 10 minutes.
 
+[[regulars]]
 And A Plea To The Regulars
 --------------------------
 
@@ -128,6 +152,7 @@ So I do invite you to consider giving the simple, obvious answer first. It's oft
 
 All that out of the way, On to the FAQ
 
+[[which]]
 Which Prolog To Use
 -------------------
 
@@ -141,6 +166,7 @@ Further, it's the most popular Prolog for commercial and research use, so the pe
 
 Bias warning - one of the authors of this FAQ is a peripheral contributor to SWI-Prolog.
 
+[[hello]]
 Hello World
 -----------
 
@@ -268,6 +294,7 @@ Now ask Prolog if hello_world is true by querying
 
 and it prints hello world on the console and assures you that it's indeed true.
 
+[[cheat]]
 Ten Second Syntax Cheat Sheet
 -----------------------------
 
@@ -297,6 +324,7 @@ format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
 format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).
 ----
 
+[[not_repl]]
 Why can't I type in code at the repl?
 -------------------------------------
 
@@ -311,6 +339,7 @@ Note the extra parens.
 
 But I don't recommend it.
 
+[[hung]]
 Prolog Hung
 -----------
 
@@ -370,6 +399,7 @@ ERROR: Out of local stack
 
 Both are out of control recursion. They call themselves over and over without limit.
 
+[[find_help]]
 How do I find the predicate that does so and so?
 ------------------------------------------------
 
@@ -377,6 +407,7 @@ How do I find the predicate that does so and so?
 
 * The search doesn't cover some things. http://www.google.com/[Google] can be a friend.
 
+[[debug]]
 How can I see what my code is doing?
 -----------------------------------
 
@@ -398,6 +429,7 @@ Now when mypred is unified you'll see a nice graphical debugger.
 
 Query nospy(mypred) to get rid of gthe breakpoint.
 
+[[howdy]]
 Difference between "hello", hello, HowAreYa, and \'Howdy!'
 ---------------------------------------------------------
 
@@ -539,7 +571,7 @@ A's 3, we just said so. X, we don't know, could be anything.
 When we leave quadratic_roots, X is 'bound' - it's got a value (-0.33333 in this case).
 It will also bind to -1. But it won't bind to -2.0
 
-
+[[list]]
 How do I get all the results in a list?
 ---------------------------------------
 
@@ -555,7 +587,7 @@ List = [foo, fum, fee].
 ----
 
 Why does bagof sometimes have repeats?
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Because Prolog gives back all the proofs of a thing. 
 In the family tree example, someone is a sibling if they have a mother in common, or have a father in common.
@@ -564,7 +596,7 @@ So my brother appears twice in my list of siblings.
 
 setof is like bagof, but removes repeats and sorts the items.
 
-
+[[recursion]]
 The standard recursion pattern
 ------------------------------
 
@@ -578,6 +610,7 @@ print_list([Head|Tail]) :-
       print_list(Tail).   % do the rest
 ----
 
+[[real_world]]
 Can I make real world programs in Prolog?
 -----------------------------------------
 
@@ -589,12 +622,14 @@ There are 3D libraries, machine vision libraries, and audio applications in Prol
 
 There is a SPARQL server in Prolog.
 
+[[toy]]
 So why am I doing toy problems in this class?
 ---------------------------------------------
 
 That's a very good question. You should ask your instructor (and demand more realistic education
 in Prolog).
 
+[[heard]]
 So why haven't I heard of Prolog before?
 ----------------------------------------
 
@@ -606,11 +641,13 @@ Take your choice:
 
 * Uh, that's classified (search for Prolog help wanted ads to understand this)
 
+[[web]]
 How do I make a web page in Prolog?
 -----------------------------------
 
 A tutorial on the web framework for SWI-Prolog is link:../html/index.html[here].
 
+[[wtf]]
 WTF, 4 = 2 + 2 fails?
 ---------------------
 
@@ -670,6 +707,7 @@ X = Y.
 false.
 ----
 
+[[return]]
 So everything returns true or false, right?
 -------------------------------------------
 
@@ -684,6 +722,7 @@ Instead of a return, Prolog predicates *succeed* or *fail*. If they fail, Prolog
 
 'fail' is an atom and a basic predicate that fails.
 
+[[if]]
 How do I make an if statement?
 ------------------------------
 
@@ -872,7 +911,7 @@ and wonder why they have bugs... just say *no* to the ->  and ; operators.
 (PS, the above has a bug, the 4 case is missing. It might have other bugs as well. Who knows. I'm fairly
 confident the reasonable cases above are correct just by inspection.)
 
-
+[[loop]]
 How do I make a loop?
 ---------------------
 
@@ -925,8 +964,9 @@ failure_driven_countdown :-
 Which is a good thing in this case. It'll keep trying different values of A, and printing the
 number we want along the way, until A reaches 10.
 
-How do I sum something up?  How to I return if everything's void?
------------------------------------------------------------------
+[[args]]
+How do I return if everything's void?
+-------------------------------------
 
 This is an example of how to pass things up and down the recursion stack.
 
@@ -949,7 +989,7 @@ sum_of_modded_([], Start, Start).
 
 second clause, for case where we have at least one element.
 
-=| [Head | Tail] |= only unifies if we have at least one element.
++[Head | Tail]+ only unifies if we have at least one element.
 
 notice that we're leaving Sum alone. Thinking Logically, 
 Sum is bound by the recursive call. Thinking procedurally,
