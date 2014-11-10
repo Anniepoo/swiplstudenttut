@@ -793,6 +793,11 @@ asciidoc.install();
 </li>
 <li>
 <p>
+<a href="#blue">I get true</a>
+</p>
+</li>
+<li>
+<p>
 <a href="#list">How do I get all the results in a list?</a>
 </p>
 </li>
@@ -823,7 +828,7 @@ asciidoc.install();
 </li>
 <li>
 <p>
-<a href="#wtf">WTF</a>
+<a href="#wtf">WTF? 4 = 2 + 2 fails?</a>
 </p>
 </li>
 <li>
@@ -853,7 +858,7 @@ asciidoc.install();
 <h2 id="strong_advice">Strong Advice for Students on ##prolog</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>There are about 100,000 students <strong>each semester</strong> who take a programming languages class that includes some basic Prolog.</p></div>
-<div class="paragraph"><p>There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.</p></div>
+<div class="paragraph"><p>There are about 5000 commercial Prolog programmers in the entire world, and 3500 or so researchers who use Prolog (these numbers are completely wild guesses).</p></div>
 <div class="paragraph"><p>The small community means if you discover the great fun and power of Prolog and fall in love with it, we&#8217;ll take you to our breast. BUT&#8230;</p></div>
 <div class="paragraph"><p>In their own self defense, regular denizens of ##prolog will <strong>definitely ignore you</strong> if you ignore the five C&#8217;s -</p></div>
 <div class="dlist"><dl>
@@ -1080,12 +1085,24 @@ After we spend 30 minutes solving your complex issue, don&#8217;t kill the chann
 <div class="sectionbody">
 <div class="paragraph"><p>If you&#8217;re one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
 I have a plea.</p></div>
+<div class="sect2">
+<h3 id="_answer_the_question_assuming_the_beginner_is_a_beginner">Answer the question assuming the beginner is a beginner</h3>
 <div class="paragraph"><p>I&#8217;ve seen plenty of misbehavior from students. But I&#8217;ve also seen plenty of regulars answer reasonable, simple
 beginner questions with category theory. If they ask about functions, suspect they mean predicates until otherwise
 proven. I don&#8217;t think you&#8217;re intending to be mean, but when you demonstrate your intellect or highlight a fascinating
 corner of Prolog, in effect you&#8217;re ignoring the poor petitioner.</p></div>
 <div class="paragraph"><p>So I do invite you to consider giving the simple, obvious answer first. It&#8217;s often what the asker needs.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_avoid_competing_teachers_syndrome">Avoid Competing Teachers Syndrome</h3>
+<div class="paragraph"><p>There are a million ways to explain anything. If a new Prolog user is in the channel and someone is already helping them, refrain, please from offering your own much cooler/faster/more monadic/etc solution. I&#8217;d suggest to you that no one can learn as well from a cacaphony of competing voices as from a single clear voice.</p></div>
+<div class="paragraph"><p>When helping on the channel I often have a strategy for helping the student planned out. Random offers of explanation/advice/solutions are likely to disrupt those plans.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_the_rules_of_the_road">The Rules of The Road</h3>
+<div class="paragraph"><p>I&#8217;d offer this "Rule of the Road" - in sailing the Rules of the Road establish which of two ships approaching on a collision course should turn.  I&#8217;d suggest our rule of the road is "If someone is already engaging the new Prolog programmer, let them continue."</p></div>
 <div class="paragraph"><p>All that out of the way, On to the FAQ</p></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1358,10 +1375,11 @@ a aborts
 <div class="sectionbody">
 <div class="paragraph"><p>Prolog&#8217;s infinitely weird. It has no control structures, backs up, doesn&#8217;t have functions or return, and
 <em>now</em> you&#8217;re telling me this language doesn&#8217;t have <strong>STRINGS</strong> for God&#8217;s sake?</p></div>
-<div class="paragraph"><p>Yup.</p></div>
+<div class="paragraph"><p>Yup. Well, SWI-Prolog added strings in revision 7.</p></div>
 <div class="sect2">
-<h3 id="_hello">"hello"</h3>
-<div class="paragraph"><p>The first one is a "codes". It&#8217;s actually syntactic sugar for a list of ascii codes as integers.</p></div>
+<h3 id="_hello_pre_swi_prolog_rev_7">"hello" (pre SWI-Prolog rev 7)</h3>
+<div class="paragraph"><p>The first one used to be a "codes", and your class might still be taught this way.
+It&#8217;s actually syntactic sugar for a list of ascii codes as integers.</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>15 ?- X = "hello".
@@ -1379,7 +1397,12 @@ X = "hello".      &lt;-- still a list of ascii codes</code></pre>
 </div></div>
 </div>
 <div class="sect2">
-<h3 id="_hello_2">hello</h3>
+<h3 id="_hello_post_swi_prolog_rev_7">"hello" (post SWI-Prolog rev 7)</h3>
+<div class="paragraph"><p>Avoiding the space wasted with codes style strings, SWI-Prolog revision 7 started making double_quoted strings be
+true Strings, stored compactly.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_hello">hello</h3>
 <div class="paragraph"><p>This is an atom. Atoms are <em>interned</em> strings. You hear in WWII stories how somebody was shot down over
 neutral territory and <em>interned</em> - stuck there until the war was over.</p></div>
 <div class="paragraph"><p>Same thing here - atoms don&#8217;t change.
@@ -1467,6 +1490,27 @@ A&#8217;s 3, we just said so. X, we don&#8217;t know, could be anything.</p></di
 <div class="paragraph"><p>When we leave quadratic_roots, X is <em>bound</em> - it&#8217;s got a value (-0.33333 in this case).
 It will also bind to -1. But it won&#8217;t bind to -2.0</p></div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="blue">I get true, then false when I expected just true</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Sometimes after the last solution, when you expect prolog to just stop, it instead waits for you to type ; one more
+time. So something like</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>?- member(a, [a, b, c]).
+true ;      &lt;-- waits for me to type the ;
+false.</code></pre>
+</div></div>
+<div class="paragraph"><p>This is just because Prolog&#8217;s not infinitely smart about knowing if it&#8217;s got another solution. A story to illustrate:</p></div>
+<div class="paragraph"><p>A woman walks into a hardware store and says to the owner "I&#8217;m driving in fence posts, I need a really big hammer"
+The owner shows her a hammer. She says "No, I need a bigger hammer than that".
+The owner says "hold on, I have a bigger one in back".</p></div>
+<div class="paragraph"><p>He comes back a couple minutes later and says "Sorry, must have sold it. That&#8217;s the biggest we have."</p></div>
+<div class="paragraph"><p>The first solution is offered (the first hammer). She rejects it, and the storeowner tries again. This time he fails.
+He thought he might have another solution, but he doesn&#8217;t.</p></div>
+<div class="paragraph"><p>Students often try to eliminate these. They have no effect on execution.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1692,11 +1736,14 @@ don&#8217;t try anything else.</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 print_roll(Roll) :-
     writeln(Roll).</code></pre>
 </div></div>
@@ -1706,11 +1753,14 @@ Until we get those bugs out, lets just print <em>not a dice roll</em> for those.
 <div class="listingblock">
 <div class="content">
 <pre><code>print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 % do this case next so it's not caught by the catch all
 print_roll(Roll) :-
     Roll &lt; 2  ... wish I had an or... Roll &gt; 12,
@@ -1725,18 +1775,23 @@ But we <em>really</em> have two different cases.</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 % do this case next so it's not caught by the catch all
 print_roll(Roll) :-
     Roll &lt; 2,
-    writeln('not a roll'),!.
+        !,
+    writeln('not a roll').
 print_roll(Roll) :-
     Roll &gt; 12,
-    writeln('not a roll'),!.
+        !,
+    writeln('not a roll').
 print_roll(Roll) :-
     writeln(Roll).</code></pre>
 </div></div>
@@ -1864,7 +1919,7 @@ like reading lines from a file and summing them, or summing some power series.</
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-04-04 16:32:46 Pacific Daylight Time
+Last updated 2014-11-09 20:50:43 Pacific Standard Time
 </div>
 </div>
 </body>

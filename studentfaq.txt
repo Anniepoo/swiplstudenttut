@@ -15,6 +15,7 @@ link:../index.html[Home]
 * <<find_help, How do I find the predicate that does so and so?>>
 * <<debug, How can I see what my code is doing?>>
 * <<howdy, Difference between "hello", hello, HowAreYa, and \'Howdy!'>>
+* <<blue, I get true, then false when I expected just true>>
 * <<list, How do I get all the results in a list?>>
 * <<recursion, The standard recursion pattern>>
 * <<real_world, Can I make real world programs in Prolog?>>
@@ -33,7 +34,7 @@ Strong Advice for Students on ##prolog
 
 There are about 100,000 students *each semester* who take a programming languages class that includes some basic Prolog.
 
-There are about 1000 commercial Prolog programmers in the entire world, and 1500 or so researchers who use Prolog.
+There are about 5000 commercial Prolog programmers in the entire world, and 3500 or so researchers who use Prolog (these numbers are completely wild guesses).
 
 The small community means if you discover the great fun and power of Prolog and fall in love with it, we'll take you to our breast. BUT...
 
@@ -143,12 +144,28 @@ And A Plea To The Regulars
 If you're one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
 I have a plea.
 
+Answer the question assuming the beginner is a beginner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 I've seen plenty of misbehavior from students. But I've also seen plenty of regulars answer reasonable, simple
 beginner questions with category theory. If they ask about functions, suspect they mean predicates until otherwise
 proven. I don't think you're intending to be mean, but when you demonstrate your intellect or highlight a fascinating
 corner of Prolog, in effect you're ignoring the poor petitioner. 
 
 So I do invite you to consider giving the simple, obvious answer first. It's often what the asker needs.
+
+Avoid Competing Teachers Syndrome
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are a million ways to explain anything. If a new Prolog user is in the channel and someone is already helping them, refrain, please from offering your own much cooler/faster/more monadic/etc solution. I'd suggest to you that no one can learn as well from a cacaphony of competing voices as from a single clear voice.
+
+When helping on the channel I often have a strategy for helping the student planned out. Random offers of explanation/advice/solutions are likely to disrupt those plans.
+
+The Rules of The Road
+~~~~~~~~~~~~~~~~~~~~~
+
+I'd offer this "Rule of the Road" - in sailing the Rules of the Road establish which of two ships approaching on a collision course should turn.  I'd suggest our rule of the road is "If someone is already engaging the new Prolog programmer, let them continue."
+
 
 All that out of the way, On to the FAQ
 
@@ -436,12 +453,13 @@ Difference between "hello", hello, HowAreYa, and \'Howdy!'
 Prolog's infinitely weird. It has no control structures, backs up, doesn't have functions or return, and
 _now_ you're telling me this language doesn't have *STRINGS* for God's sake?
 
-Yup.
+Yup. Well, SWI-Prolog added strings in revision 7.
 
-"hello"
-~~~~~~~
+"hello" (pre SWI-Prolog rev 7)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first one is a "codes". It's actually syntactic sugar for a list of ascii codes as integers.
+The first one used to be a "codes", and your class might still be taught this way. 
+It's actually syntactic sugar for a list of ascii codes as integers.
 
 ----
 15 ?- X = "hello".
@@ -458,6 +476,12 @@ true.
 24 ?- X = "hello".
 X = "hello".      <-- still a list of ascii codes
 ----
+
+"hello" (post SWI-Prolog rev 7)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Avoiding the space wasted with codes style strings, SWI-Prolog revision 7 started making double_quoted strings be 
+true Strings, stored compactly.
 
 hello
 ~~~~~
@@ -570,6 +594,32 @@ A's 3, we just said so. X, we don't know, could be anything.
 
 When we leave quadratic_roots, X is 'bound' - it's got a value (-0.33333 in this case).
 It will also bind to -1. But it won't bind to -2.0
+
+[[blue]]
+I get true, then false when I expected just true
+------------------------------------------------
+
+Sometimes after the last solution, when you expect prolog to just stop, it instead waits for you to type ; one more
+time. So something like
+
+----
+?- member(a, [a, b, c]).
+true ;      <-- waits for me to type the ;
+false.
+----
+
+This is just because Prolog's not infinitely smart about knowing if it's got another solution. A story to illustrate:
+
+A woman walks into a hardware store and says to the owner "I'm driving in fence posts, I need a really big hammer"
+The owner shows her a hammer. She says "No, I need a bigger hammer than that".
+The owner says "hold on, I have a bigger one in back".
+
+He comes back a couple minutes later and says "Sorry, must have sold it. That's the biggest we have."
+
+The first solution is offered (the first hammer). She rejects it, and the storeowner tries again. This time he fails.
+He thought he might have another solution, but he doesn't.  
+
+Students often try to eliminate these. They have no effect on execution.
 
 [[list]]
 How do I get all the results in a list?
@@ -812,11 +862,14 @@ don't try anything else.
 
 ----
 print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 print_roll(Roll) :-
     writeln(Roll).
 ----
@@ -828,11 +881,14 @@ Until we get those bugs out, lets just print 'not a dice roll' for those.
 
 ----
 print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 % do this case next so it's not caught by the catch all
 print_roll(Roll) :-
     Roll < 2  ... wish I had an or... Roll > 12,
@@ -849,18 +905,23 @@ But we _really_ have two different cases.
 
 ----
 print_roll(2) :-
-    writeln('snake eyes'),!.
+    !,
+    writeln('snake eyes').
 print_roll(4) :-
-    writeln('Little Joe From Kokomo'),!.
+    !,
+    writeln('Little Joe From Kokomo').
 print_roll(12) :-
-    writeln('boxcars'),!.
+    !,
+    writeln('boxcars').
 % do this case next so it's not caught by the catch all
 print_roll(Roll) :-
     Roll < 2,
-    writeln('not a roll'),!.
+	!,
+    writeln('not a roll').
 print_roll(Roll) :-
     Roll > 12,
-    writeln('not a roll'),!.
+	!,
+    writeln('not a roll').
 print_roll(Roll) :-
     writeln(Roll).
 
