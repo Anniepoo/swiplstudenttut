@@ -1,5 +1,5 @@
-﻿Frequently Asked Questions for SWI-Prolog
-=========================================
+﻿Frequently Asked Questions for ##Prolog
+=======================================
 Anne Ogborn <aogborn@uh.edu>
 v0.1  June 2013
 
