@@ -125,6 +125,7 @@ expressing your low opinion of Prolog and loudly bemoaning being forced to under
 
 * After we spend 30 minutes solving your complex issue, don't kill the channel immediately without saying thanks. Maybe our answer only _looked_ right, and you'll be back in 10 minutes.
 
+[[regulars]]
 And A Plea To The Regulars
 --------------------------
 
@@ -148,6 +149,7 @@ There are a million ways to explain anything. If a new Prolog user is in the cha
 
 When helping on the channel I often have a strategy for helping the student planned out. Random offers of explanation/advice/solutions are likely to disrupt those plans.
 
+[[rulesoftheroad]]
 The Rules of The Road
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,6 +157,7 @@ I'd offer this "Rule of the Road" - in sailing the Rules of the Road establish w
 
 All that out of the way, On to the FAQ
 
+[[whichprolog]]
 Which Prolog To Use
 -------------------
 
@@ -297,6 +300,7 @@ Now ask Prolog if hello_world is true by querying
 
 and it prints hello world on the console and assures you that it's indeed true.
 
+[[syntax]]
 Syntax Cheat Sheet
 ------------------
 
@@ -326,6 +330,7 @@ format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
 format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).
 ----
 
+[[wheretotype]]
 Where to type in code
 ---------------------
 
@@ -334,7 +339,7 @@ prove queries based on those rules.
 
 The facts and rules go in a file. You enter the queries at the +?-+ prompt, in the terminal window if you're on mac or linux, or in the console window on Windows. See <<hello, Hello World>> for more detail.
 
-
+[[repl]]
 Why can't I type in code at the repl?
 -------------------------------------
 
@@ -349,6 +354,7 @@ Note the extra parens.
 
 But I don't recommend doing this. Your code will go away when you halt.
 
+[[more]]
 More Solutions
 --------------
 
@@ -414,6 +420,7 @@ ERROR: Out of local stack
 
 Both are out of control recursion. They call themselves over and over without limit.
 
+[[gethelp]]
 How do I find the predicate that does so and so?
 ------------------------------------------------
 
@@ -421,6 +428,7 @@ How do I find the predicate that does so and so?
 
 * The search doesn't cover some things. http://www.google.com/[Google] can be a friend.
 
+[[debugger]]
 The Graphic Debugger
 --------------------
 
@@ -444,6 +452,7 @@ Now when mypred is unified you'll see a nice graphical debugger.
 
 Query nospy(mypred) to get rid of gthe breakpoint.
 
+[[variablesatomsstrings]]
 Variables, atoms, strings, and case
 -----------------------------------
 
@@ -594,6 +603,7 @@ A's 3, we just said so. X, we don't know, could be anything.
 When we leave quadratic_roots, X is 'bound' - it's got a value (-0.33333 in this case).
 It will also bind to -1. But it won't bind to -2.0
 
+[[truefalse]]
 I get true, then false when I expected just true
 ------------------------------------------------
 
@@ -621,6 +631,7 @@ Students often try to eliminate these. They have no effect on execution.
 
 If you do want to eliminate them, read the section on the cut
 
+[[cut]]
 The Cut
 -------
 
@@ -658,6 +669,7 @@ Cut means 'OK, I've got what I'm sure is the last answer for this predicate'.  A
 
 For a good example of this, see link:if[How to make an if]
 
+[[aggregate]]
 How do I get all the results in a list?
 ---------------------------------------
 
@@ -682,6 +694,7 @@ So my brother appears twice in my list of siblings.
 
 setof is like bagof, but removes repeats and sorts the items.
 
+[[recursion]]
 The standard recursion pattern
 ------------------------------
 
@@ -695,6 +708,7 @@ print_list([Head|Tail]) :-
       print_list(Tail).   % do the rest
 ----
 
+[[realworld]]
 Can I make real world programs in Prolog?
 -----------------------------------------
 
@@ -706,12 +720,14 @@ There are 3D libraries, machine vision libraries, and audio applications in Prol
 
 There is a SPARQL server in Prolog.
 
+[[toy]]
 So why am I doing toy problems in this class?
 ---------------------------------------------
 
 That's a very good question. You should ask your instructor (and demand more realistic education
 in Prolog).
 
+[[neverheard]]
 So why haven't I heard of Prolog before?
 ----------------------------------------
 
@@ -723,16 +739,19 @@ Take your choice:
 
 * Uh, that's classified (search for Prolog help wanted ads to understand this)
 
+[[old]]
 Isn't Prolog really OLD?
 ------------------------
 
 Yes, it is. It's history is a bit convoluted, but it started in the 1970's. The SWI-Prolog code base is approaching it's 30th birthday.
 
+[[web]]
 How do I make a web page in Prolog?
 -----------------------------------
 
 A tutorial on the web framework for SWI-Prolog is link:../html/index.html[here].
 
+[[arithmetic]]
 Why Can't I do arithmetic?
 --------------------------
 
@@ -813,6 +832,7 @@ X = Y.
 false.
 ----
 
+[[void]]
 So everything returns true or false, right?
 -------------------------------------------
 
@@ -1027,6 +1047,7 @@ and wonder why they have bugs... just say *no* to the ->  and ; operators.
 (PS, the above has a bug, the 4 case is missing. It might have other bugs as well. Who knows. I'm fairly
 confident the reasonable cases above are correct just by inspection.)
 
+[[loop]]
 How do I make a loop?
 ---------------------
 
@@ -1079,6 +1100,7 @@ failure_driven_countdown :-
 Which is a good thing in this case. It'll keep trying different values of A, and printing the
 number we want along the way, until A reaches 10.
 
+[[void]]
 How do I return if everything's void?
 -------------------------------------
 
