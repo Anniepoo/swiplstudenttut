@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.8" />
-<title></title>
+<title>Frequently Asked Questions for ##Prolog</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -87,14 +87,10 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-.monospaced, code, pre {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
+pre {
   padding: 0;
   margin: 0;
 }
-
 
 #author {
   color: #527bbd;
@@ -183,7 +179,7 @@ div.quoteblock, div.verseblock {
   margin-left: 1.0em;
   margin-right: 10%;
   border-left: 5px solid #f0f0f0;
-  color: #888;
+  color: #777777;
 }
 
 div.quoteblock > div.attribution {
@@ -353,7 +349,7 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -411,13 +407,17 @@ span.underline { text-decoration: underline; }
 span.overline { text-decoration: overline; }
 span.line-through { text-decoration: line-through; }
 
-div.unbreakable { page-break-inside: avoid; }
-
 
 /*
  * xhtml11 specific
  *
  * */
+
+tt {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
+}
 
 div.tableblock {
   margin-top: 1.0em;
@@ -451,6 +451,12 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
+
+.monospaced {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
+}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -533,6 +539,112 @@ body.manpage div.sectionbody {
 }
 
 
+/*
+ * Theme specific overrides of the preceding (asciidoc.css) CSS.
+ *
+ */
+body {
+  font-family: Garamond, Georgia, serif;
+  font-size: 17px;
+  color: #3E4349;
+  line-height: 1.3em;
+}
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Garmond, Georgia, serif;
+  font-weight: normal;
+  border-bottom-width: 0;
+  color: #3E4349;
+}
+div.title, caption.title { color: #596673; font-weight: bold; }
+h1 { font-size: 240%; }
+h2 { font-size: 180%; }
+h3 { font-size: 150%; }
+h4 { font-size: 130%; }
+h5 { font-size: 115%; }
+h6 { font-size: 100%; }
+#header h1 { margin-top: 0; }
+#toc {
+  color: #444444;
+  line-height: 1.5;
+  padding-top: 1.5em;
+}
+#toctitle {
+  font-size: 20px;
+}
+#toc a {
+    border-bottom: 1px dotted #999999;
+    color: #444444 !important;
+    text-decoration: none !important;
+}
+#toc a:hover {
+    border-bottom: 1px solid #6D4100;
+    color: #6D4100 !important;
+    text-decoration: none !important;
+}
+div.toclevel1 { margin-top: 0.2em; font-size: 16px; }
+div.toclevel2 { margin-top: 0.15em; font-size: 14px; }
+em, dt, td.hdlist1 { color: black; }
+strong { color: #3E4349; }
+a { color: #004B6B; text-decoration: none; border-bottom: 1px dotted #004B6B; }
+a:visited { color: #615FA0; border-bottom: 1px dotted #615FA0; }
+a:hover { color: #6D4100; border-bottom: 1px solid #6D4100; }
+div.tableblock > table, table.tableblock { border: 3px solid #E8E8E8; }
+th.tableblock, td.tableblock { border: 1px solid #E8E8E8; }
+ul > li > * { color: #3E4349; }
+pre, tt, .monospaced { font-family: Consolas,Menlo,'Deja Vu Sans Mono','Bitstream Vera Sans Mono',monospace; }
+tt, .monospaced { font-size: 0.9em; color: black;
+}
+div.exampleblock > div.content, div.sidebarblock > div.content, div.listingblock > div.content { border-width: 0 0 0 3px; border-color: #E8E8E8; }
+div.verseblock { border-left-width: 0; margin-left: 3em; }
+div.quoteblock { border-left-width: 3px; margin-left: 0; margin-right: 0;}
+div.admonitionblock td.content { border-left: 3px solid #E8E8E8; }
+
+
+div.imageblock {
+	float: right;
+	margin-left: 8px;
+}
+
+
+@media screen {
+  body {
+    max-width: 50em; /* approximately 80 characters wide */
+    margin-left: 16em;
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 13em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -725,145 +837,37 @@ install: function(toclevels) {
 }
 
 }
-asciidoc.install();
+asciidoc.install(2);
 /*]]>*/
 </script>
 </head>
 <body class="article">
 <div id="header">
+<h1>Frequently Asked Questions for ##Prolog</h1>
+<span id="author">Anne Ogborn</span><br />
+<span id="email"><code>&lt;<a href="mailto:anne@swi-prolog.org">anne@swi-prolog.org</a>&gt;</code></span><br />
+<span id="revnumber">version 1.1,</span>
+<span id="revdate">April 2, 2016</span>
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
 </div>
 <div id="content">
-<div class="paragraph"><p>Frequently Asked Questions for ##Prolog</p></div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph"><p>Anne Ogborn &lt;<a href="mailto:annie66us@yahoo.com">annie66us@yahoo.com</a>&gt;
-:Author Initials: AO
-:Revision: 1.1
-:Revision: 1.1
-:Date:  April 2, 2016
-:toc2:
-:icons:
-:numbered:
-:website: <a href="http://www.pathwayslms.com/swipltuts/">http://www.pathwayslms.com/swipltuts/</a>
-:theme: pathways
-Anne Ogborn &lt;<a href="mailto:annie66us@yahoo.com">annie66us@yahoo.com</a>&gt;
-v0.1  June 2013
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>v0.1  June 2013
 v1.1   April 2016 - Made topic titles clearer</p></div>
-<div class="paragraph"><p><a href="../index.html">Home</a></p></div>
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="#strong_advice">Strong Advice for Students on ##prolog</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#regulars">And A Plea To The Regulars</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#which">Which Prolog To Use</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#hello">Hello World on Various OSes</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#cheat">Ten Second Syntax Cheat Sheet</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#not_repl">Why can&#8217;t I type in code at the repl?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#hung">Prolog Hung</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#find_help">How do I find the predicate that does so and so?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#debug">How can I see what my code is doing?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#howdy">Difference between "hello"</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#blue">I get true</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#list">How do I get all the results in a list?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#recursion">The standard recursion pattern</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#real_world">Can I make real world programs in Prolog?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#toy">So why am I doing toy problems in this class?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#heard">So why haven&#8217;t I heard of Prolog before?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#web">How do I make a web page in Prolog?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#wtf">WTF? 4 = 2 + 2 fails?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#return">So everything returns true or false</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#if">How do I make an if statement?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#loop">How do I make a loop?</a>
-</p>
-</li>
-<li>
-<p>
-<a href="#args">How do I return if everything&#8217;s void?</a>
-</p>
-</li>
-</ul></div>
-<div class="paragraph" id="strong_advice"><p>There are about 100,000 students <strong>each semester</strong> who take a programming languages class that includes some basic Prolog.</p></div>
-<div class="paragraph"><p>There are about 5000 commercial Prolog programmers in the entire world, and 3500 or so researchers who use Prolog (these numbers are completely wild guesses).</p></div>
+<div class="paragraph"><p>Note - Anne Ogborn and Michael Richter are the authors of this FAQ.  Not sure how Michael&#8217;s name&#8217;s been left off it all this time.</p></div>
+<div class="paragraph"><p><a href="/swipltuts/index.html">Up to All Tutorials</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asking_questions_on_prolog">1. Asking Questions on ##prolog</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Some strong advice for undergrad students asking questions on ##prolog.</p></div>
+<div class="paragraph"><p>There are about 50,000 students <strong>each semester</strong> who take a programming languages class that includes some basic Prolog.</p></div>
+<div class="paragraph"><p>There are about 5000 commercial Prolog programmers in the entire world, and another 15000 or so researchers who use Prolog (these numbers are completely wild guesses).</p></div>
 <div class="paragraph"><p>The small community means if you discover the great fun and power of Prolog and fall in love with it, we&#8217;ll take you to our breast. BUT&#8230;</p></div>
 <div class="paragraph"><p>In their own self defense, regular denizens of ##prolog will <strong>definitely ignore you</strong> if you ignore the five C&#8217;s -</p></div>
 <div class="dlist"><dl>
@@ -908,6 +912,8 @@ v1.1   April 2016 - Made topic titles clearer</p></div>
 </p>
 </dd>
 </dl></div>
+<div class="sect2">
+<h3 id="_correct">1.1. Correct</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -946,6 +952,9 @@ Don&#8217;t ask for help setting up complex development environments when you&#8
 </p>
 </li>
 </ul></div>
+</div>
+<div class="sect2">
+<h3 id="_complete">1.2. Complete</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -963,6 +972,9 @@ In Prolog code is data and vice versa. A program that depends on <em>some data</
 </p>
 </li>
 </ul></div>
+</div>
+<div class="sect2">
+<h3 id="_concise">1.3. Concise</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -976,6 +988,9 @@ You may find that in making the minimal example you&#8217;ll understand your pro
 </p>
 </li>
 </ul></div>
+</div>
+<div class="sect2">
+<h3 id="_clear">1.4. Clear</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -1005,6 +1020,9 @@ Reasonable: I read the chapter on <em>cut</em>, read this website tutorial on <e
 </p>
 </li>
 </ul></div>
+</div>
+<div class="sect2">
+<h3 id="_courteous">1.5. Courteous</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -1068,25 +1086,52 @@ After we spend 30 minutes solving your complex issue, don&#8217;t kill the chann
 </p>
 </li>
 </ul></div>
-<div class="paragraph" id="regulars"><p>If you&#8217;re one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_and_a_plea_to_the_regulars">2. And A Plea To The Regulars</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>If you&#8217;re one of the many extremely bright people who regularly hangs out on ##prolog and answers questions,
 I have a plea.</p></div>
+<div class="sect2">
+<h3 id="_answer_the_question_assuming_the_beginner_is_a_beginner">2.1. Answer the question assuming the beginner is a beginner</h3>
 <div class="paragraph"><p>I&#8217;ve seen plenty of misbehavior from students. But I&#8217;ve also seen plenty of regulars answer reasonable, simple
 beginner questions with category theory. If they ask about functions, suspect they mean predicates until otherwise
 proven. I don&#8217;t think you&#8217;re intending to be mean, but when you demonstrate your intellect or highlight a fascinating
 corner of Prolog, in effect you&#8217;re ignoring the poor petitioner.</p></div>
 <div class="paragraph"><p>So I do invite you to consider giving the simple, obvious answer first. It&#8217;s often what the asker needs.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_avoid_competing_teachers_syndrome">2.2. Avoid Competing Teachers Syndrome</h3>
 <div class="paragraph"><p>There are a million ways to explain anything. If a new Prolog user is in the channel and someone is already helping them, refrain, please from offering your own much cooler/faster/more monadic/etc solution. I&#8217;d suggest to you that no one can learn as well from a cacaphony of competing voices as from a single clear voice.</p></div>
 <div class="paragraph"><p>When helping on the channel I often have a strategy for helping the student planned out. Random offers of explanation/advice/solutions are likely to disrupt those plans.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_the_rules_of_the_road">2.3. The Rules of The Road</h3>
 <div class="paragraph"><p>I&#8217;d offer this "Rule of the Road" - in sailing the Rules of the Road establish which of two ships approaching on a collision course should turn.  I&#8217;d suggest our rule of the road is "If someone is already engaging the new Prolog programmer, let them continue."</p></div>
 <div class="paragraph"><p>All that out of the way, On to the FAQ</p></div>
-<div class="paragraph" id="which"><p>I recommend <a href="http://www.swi-prolog.org">SWI-Prolog</a>.
-There are many good things to be said about other implementations of Prolog. Some are faster in some circumstances, have nice constraint libraries, or other attractive features, but you won&#8217;t be using any of those things as a beginning student.
-Installation on windows and mac is simple, there are <a href="http://www.swi-prolog.org/download/stable">installers for mac and windows and packages for most linux distros</a>.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_which_prolog_to_use">3. Which Prolog To Use</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>I recommend <a href="http://www.swi-prolog.org">SWI-Prolog</a>.</p></div>
+<div class="paragraph"><p>There are many good things to be said about other implementations of Prolog. Some are faster in some circumstances, have nice constraint libraries, or other attractive features, but you won&#8217;t be using any of those things as a beginning student.
+Installation on windows and mac is simple, there are <a href="http://www.swi-prolog.org/download/stable">installers for mac and windows and packages for most linux distros</a>. Building from sources on Linux is also simple.</p></div>
 <div class="paragraph"><p>SWI-Prolog has a built in IDE with a graphical debugger and syntax coloring editor.</p></div>
 <div class="paragraph"><p>Further, it&#8217;s the most popular Prolog for commercial and research use, so the person you&#8217;re talking to probably can answer questions about SWI more easily.</p></div>
 <div class="paragraph"><p>Bias warning - one of the authors of this FAQ is a peripheral contributor to SWI-Prolog.</p></div>
-<div class="paragraph" id="hello"><p>An old tradition in computing is to write a program that prints <em>hello world</em> when one starts using a new language.
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hello_world">4. Hello World</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>An old tradition in computing is to write a program that prints <em>hello world</em> when one starts using a new language.
 Here&#8217;s how to do it in SWI-Prolog.</p></div>
+<div class="sect2">
+<h3 id="_on_windows">4.1. On Windows</h3>
 <div class="paragraph"><p>Right click in the file browser and make a new text document.</p></div>
 <div class="paragraph"><p><span class="image">
 <img src="filebrowsertext.png" alt="fire browser" />
@@ -1128,6 +1173,9 @@ and as a side effect prints out <em>hello world</em>.</p></div>
 <pre><code>?- hello_world.</code></pre>
 </div></div>
 <div class="paragraph"><p>and it prints hello world on the console and assures you that it&#8217;s indeed true.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_on_linux_or_mac">4.2. On Linux or Mac</h3>
 <div class="paragraph"><p>These directions are for linux. Mac is similar.</p></div>
 <div class="paragraph"><p>In a terminal</p></div>
 <div class="listingblock">
@@ -1180,7 +1228,13 @@ and as a side effect prints out <em>hello world</em>.</p></div>
 <pre><code>?- hello_world.</code></pre>
 </div></div>
 <div class="paragraph"><p>and it prints hello world on the console and assures you that it&#8217;s indeed true.</p></div>
-<div class="listingblock" id="cheat">
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_syntax_cheat_sheet">5. Syntax Cheat Sheet</h2>
+<div class="sectionbody">
+<div class="listingblock">
 <div class="content">
 <pre><code>% comments start with a percent sign
 %% don't double them, you've just set off the doxygen style autodoc thing
@@ -1206,15 +1260,39 @@ format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
 % pretty much everything else can be handled with twiddle w
 format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).</code></pre>
 </div></div>
-<div class="paragraph" id="not_repl"><p>That&#8217;s not a repl, that&#8217;s a top level. You&#8217;re typing in queries. Type code into a file.
+</div>
+</div>
+<div class="sect1">
+<h2 id="_where_to_type_in_code">6. Where to type in code</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Prolog&#8217;s basic paradigm is to define a <em>world</em> (a <strong>knowledge base</strong> ) of facts and rules, and then ask the system to
+prove queries based on those rules.</p></div>
+<div class="paragraph"><p>The facts and rules go in a file. You enter the queries at the <code>?-</code> prompt, in the terminal window if you&#8217;re on mac or linux, or in the console window on Windows. See <a id="Hello World"></a> for more detail.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_can_8217_t_i_type_in_code_at_the_repl">7. Why can&#8217;t I type in code at the repl?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>That&#8217;s not a repl, that&#8217;s a top level. You&#8217;re typing in queries. Type code into a file.
 If you really do want to enter code from the top level, you can use assert:</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>?- assert((mypred(X) :- write(&gt;&gt;&gt;),writeln(X))).</code></pre>
 </div></div>
 <div class="paragraph"><p>Note the extra parens.</p></div>
-<div class="paragraph"><p>But I don&#8217;t recommend it.</p></div>
-<div class="paragraph" id="hung"><p>SWI-Prolog&#8217;s pretty reliable. Here&#8217;s ways to hang it:</p></div>
+<div class="paragraph"><p>But I don&#8217;t recommend doing this. Your code will go away when you halt.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_solutions">8. More Solutions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>See <a id="Prolog Hung"></a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prolog_hung">9. Prolog Hung</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>SWI-Prolog&#8217;s pretty reliable. Here&#8217;s ways to hang it:</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>14 ?- assert(mep(7)).
@@ -1262,7 +1340,12 @@ ERROR: Out of local stack
    Exception: (1,763,388) uses_lots_of_memory(_G1760) ?</code></pre>
 </div></div>
 <div class="paragraph"><p>Both are out of control recursion. They call themselves over and over without limit.</p></div>
-<div class="ulist" id="find_help"><ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_find_the_predicate_that_does_so_and_so">10. How do I find the predicate that does so and so?</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
 <li>
 <p>
 At <a href="http://www.swi-prolog.org/">SWI-Prolog Website</a> use the search box.
@@ -1274,7 +1357,13 @@ The search doesn&#8217;t cover some things. <a href="http://www.google.com/">Goo
 </p>
 </li>
 </ul></div>
-<div class="paragraph" id="debug"><p>Query</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_graphic_debugger">11. The Graphic Debugger</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>There are two debuggers for SWI-Prolog. We recommend the graphical one for beginners.</p></div>
+<div class="paragraph"><p>Query</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>?- tspy(mypred).</code></pre>
@@ -1303,9 +1392,17 @@ a aborts
 </li>
 </ul></div>
 <div class="paragraph"><p>Query nospy(mypred) to get rid of gthe breakpoint.</p></div>
-<div class="paragraph" id="howdy"><p>Prolog&#8217;s infinitely weird. It has no control structures, backs up, doesn&#8217;t have functions or return, and
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variables_atoms_strings_and_case">12. Variables, atoms, strings, and case</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>What&#8217;s the difference among "hello", hello, HowAreYa, and 'Howdy!' ?</p></div>
+<div class="paragraph"><p>Prolog&#8217;s infinitely weird. It has no control structures, backs up, doesn&#8217;t have functions or return, and
 <em>now</em> you&#8217;re telling me this language doesn&#8217;t have <strong>STRINGS</strong> for God&#8217;s sake?</p></div>
 <div class="paragraph"><p>Yup. Well, SWI-Prolog added strings in revision 7.</p></div>
+<div class="sect2">
+<h3 id="_hello_pre_swi_prolog_rev_7">12.1. "hello" (pre SWI-Prolog rev 7)</h3>
 <div class="paragraph"><p>The first one used to be a "codes", and your class might still be taught this way.
 It&#8217;s actually syntactic sugar for a list of ascii codes as integers.</p></div>
 <div class="listingblock">
@@ -1323,8 +1420,14 @@ true.
 24 ?- X = "hello".
 X = "hello".      &lt;-- still a list of ascii codes</code></pre>
 </div></div>
+</div>
+<div class="sect2">
+<h3 id="_hello_post_swi_prolog_rev_7">12.2. "hello" (post SWI-Prolog rev 7)</h3>
 <div class="paragraph"><p>Avoiding the space wasted with codes style strings, SWI-Prolog revision 7 started making double_quoted strings be
 true Strings, stored compactly.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_hello">12.3. hello</h3>
 <div class="paragraph"><p>This is an atom. Atoms are <em>interned</em> strings. You hear in WWII stories how somebody was shot down over
 neutral territory and <em>interned</em> - stuck there until the war was over.</p></div>
 <div class="paragraph"><p>Same thing here - atoms don&#8217;t change.
@@ -1338,6 +1441,9 @@ iAmAnAtomButDontDoThis
 ====&gt; is also an atom.
 (     not an atom (part of Prolog's basic syntax)</code></pre>
 </div></div>
+</div>
+<div class="sect2">
+<h3 id="_howdy">12.4. 'Howdy!'</h3>
 <div class="paragraph"><p>But you can print an atom. What if I want to print my real name?</p></div>
 <div class="paragraph"><p>I want an atom, but I want to put a space in it (normally not allowed) and want an uppercase first letter.</p></div>
 <div class="listingblock">
@@ -1366,6 +1472,9 @@ true.
 true.</code></pre>
 </div></div>
 <div class="paragraph"><p>Yup, that&#8217;s a predicate whose name is four open parens.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_howareya">12.5. HowAreYa</h3>
 <div class="paragraph"><p>That&#8217;s a variable. It&#8217;s a container for data. Variables start with _ (underscore) or an uppercase letter.</p></div>
 <div class="paragraph"><p>An underscore by itself is special - it&#8217;s a variable whose value we don&#8217;t care about.
 Variables that start with an underscore \_AVariable  are also ones we don&#8217;t care about,
@@ -1405,7 +1514,13 @@ X = -1.0.</code></pre>
 A&#8217;s 3, we just said so. X, we don&#8217;t know, could be anything.</p></div>
 <div class="paragraph"><p>When we leave quadratic_roots, X is <em>bound</em> - it&#8217;s got a value (-0.33333 in this case).
 It will also bind to -1. But it won&#8217;t bind to -2.0</p></div>
-<div class="paragraph" id="blue"><p>Sometimes after the last solution, when you expect prolog to just stop, it instead waits for you to type ; one more
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_i_get_true_then_false_when_i_expected_just_true">13. I get true, then false when I expected just true</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Sometimes after the last solution, when you expect prolog to just stop, it instead waits for you to type ; one more
 time. So something like</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1421,7 +1536,36 @@ The owner says "hold on, I have a bigger one in back".</p></div>
 <div class="paragraph"><p>The first solution is offered (the first hammer). She rejects it, and the storeowner tries again. This time he fails.
 He thought he might have another solution, but he doesn&#8217;t.</p></div>
 <div class="paragraph"><p>Students often try to eliminate these. They have no effect on execution.</p></div>
-<div class="paragraph" id="list"><p>I&#8217;ve written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
+<div class="paragraph"><p>If you do want to eliminate them, read the section on the cut</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_cut">14. The Cut</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The cut operator is often confusing for beginning Prolog programmers.</p></div>
+<div class="paragraph"><p>As Prolog executes, it leaves behind a <em>trail</em> of <em>choice points</em>.</p></div>
+<div class="paragraph"><p>Remember that all Prolog code is <strong>searching for a proof</strong>. If it calls a goal, that goal may have more than one answer it can give.</p></div>
+<div class="paragraph"><p>Consider the question "Where can I get a job as a programmer?"</p></div>
+<div class="paragraph"><p>"Portland" is a good answer. So is "Silicon Valley" or "Boston".  "Imbler, Oregon" probably not so much so.</p></div>
+<div class="paragraph"><p>Now suppose I ask "What places have nice weather?"</p></div>
+<div class="paragraph"><p>"San Diego", "Hawaii", and "Silicon Valley" are good choices. "Seattle" isn&#8217;t.</p></div>
+<div class="paragraph"><p>So if I want to find a place I can work as a programmer with nice weather, I first try "Portland". I make a mental note
+called a <em>choice point</em> that there are others if Portland doesn&#8217;t work out, and I ask if Portland has nice weather.</p></div>
+<div class="paragraph"><p>No, it doesn&#8217;t, so I undo my assumption I&#8217;ll be in Portland - I undo my computation since the last choice point.
+I try "Silicon Valley" and hey, that works.</p></div>
+<div class="paragraph"><p>I now have an answer. Maybe the cost of living in Silicon Valley is too high, and I back up and try something else.</p></div>
+<div class="paragraph"><p>This is great for my "where to work" scenario, but sometimes finding an answer is enough to tell you there aren&#8217;t any other answers.</p></div>
+<div class="paragraph"><p>"Where did I leave my keys?"</p></div>
+<div class="paragraph"><p>If you find your keys in your coat pocket, they&#8217;re definitely not on the nightstand, in the car, on the kitchen table, etc.</p></div>
+<div class="paragraph"><p>To express this idea, we have the cut operator, <code>!</code></p></div>
+<div class="paragraph"><p>Cut means <em>OK, I&#8217;ve got what I&#8217;m sure is the last answer for this predicate</em>.  Any choice points created <strong>since entering this predicate</strong> are destroyed, including trying other clauses of this predicate.</p></div>
+<div class="paragraph"><p>For a good example of this, see <a id="How to make an if"></a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_get_all_the_results_in_a_list">15. How do I get all the results in a list?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>I&#8217;ve written a predicate. I can get a bunch of different solutions from it by typing ; repeatedly.
 I want all those solutions in a list.</p></div>
 <div class="paragraph"><p>What you want is <a href="http://www.swi-prolog.org/pldoc/doc_for?object=bagof/3">bagof</a></p></div>
 <div class="listingblock">
@@ -1429,12 +1573,20 @@ I want all those solutions in a list.</p></div>
 <pre><code>1 ?- bagof(A, member(A, [foo, fum, fee]), List).
 List = [foo, fum, fee].</code></pre>
 </div></div>
+<div class="sect2">
+<h3 id="_why_does_bagof_sometimes_have_repeats">15.1. Why does bagof sometimes have repeats?</h3>
 <div class="paragraph"><p>Because Prolog gives back all the proofs of a thing.
 In the family tree example, someone is a sibling if they have a mother in common, or have a father in common.
 I&#8217;m my brother&#8217;s sibling both because we share a mother and because we share a father.
 So my brother appears twice in my list of siblings.</p></div>
 <div class="paragraph"><p>setof is like bagof, but removes repeats and sorts the items.</p></div>
-<div class="paragraph" id="recursion"><p>Many many times one wants to work on a problem a bit at a time. Traversing a list and printing it&#8217;s elements is
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_standard_recursion_pattern">16. The standard recursion pattern</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Many many times one wants to work on a problem a bit at a time. Traversing a list and printing it&#8217;s elements is
 a typical example.</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1443,13 +1595,28 @@ print_list([Head|Tail]) :-
       writeln(Head),      % do a little bit
       print_list(Tail).   % do the rest</code></pre>
 </div></div>
-<div class="paragraph" id="real_world"><p>Yes. 40% of Australia&#8217;s stock trading is done via a large Prolog application.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_can_i_make_real_world_programs_in_prolog">17. Can I make real world programs in Prolog?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Yes. 40% of New Zealand&#8217;s stock trading is done via a large Prolog application.</p></div>
 <div class="paragraph"><p>The web server that serves the SWI-Prolog web site is itself written in Prolog.</p></div>
 <div class="paragraph"><p>There are 3D libraries, machine vision libraries, and audio applications in Prolog.</p></div>
 <div class="paragraph"><p>There is a SPARQL server in Prolog.</p></div>
-<div class="paragraph" id="toy"><p>That&#8217;s a very good question. You should ask your instructor (and demand more realistic education
+</div>
+</div>
+<div class="sect1">
+<h2 id="_so_why_am_i_doing_toy_problems_in_this_class">18. So why am I doing toy problems in this class?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>That&#8217;s a very good question. You should ask your instructor (and demand more realistic education
 in Prolog).</p></div>
-<div class="paragraph" id="heard"><p>Take your choice:</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_so_why_haven_8217_t_i_heard_of_prolog_before">19. So why haven&#8217;t I heard of Prolog before?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Take your choice:</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -1467,9 +1634,41 @@ Uh, that&#8217;s classified (search for Prolog help wanted ads to understand thi
 </p>
 </li>
 </ul></div>
-<div class="paragraph" id="web"><p>A tutorial on the web framework for SWI-Prolog is <a href="../html/index.html">here</a>.</p></div>
-<div class="paragraph" id="wtf"><p>Yes, because you&#8217;re asking if the term <em>+</em>(2,2) can be unified with the term 4.
+</div>
+</div>
+<div class="sect1">
+<h2 id="_isn_8217_t_prolog_really_old">20. Isn&#8217;t Prolog really OLD?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Yes, it is. It&#8217;s history is a bit convoluted, but it started in the 1970&#8217;s. The SWI-Prolog code base is approaching it&#8217;s 30th birthday.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_make_a_web_page_in_prolog">21. How do I make a web page in Prolog?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>A tutorial on the web framework for SWI-Prolog is <a href="../html/index.html">here</a>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_can_8217_t_i_do_arithmetic">22. Why Can&#8217;t I do arithmetic?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Programmers coming from other languages expect these two lines to work</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>    my_foo(3 + C)
+
+        4 = 2 + 2</code></pre>
+</div></div>
+<div class="paragraph"><p>Neither one will do what you expect.</p></div>
+<div class="paragraph"><p>WTF, 4 = 2 + 2 fails?</p></div>
+<div class="paragraph"><p>Yes, because you&#8217;re asking if the term <em>+</em>(2,2) can be unified with the term 4.
 It can&#8217;t. They&#8217;re different.</p></div>
+<div class="paragraph"><p>The first example, <code>my_foo(3 + C)</code>, is the equivilent of</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>     Expr = '+'(3, C),
+         my_foo(Expr)</code></pre>
+</div></div>
+<div class="paragraph"><p>Expressions are not evaluated by default.</p></div>
 <div class="paragraph"><p>All code in Prolog can be treated as data apart from any meaning as programs.
 Everything is a term.  Some terms are executable.</p></div>
 <div class="paragraph"><p>If you want it to try to perform arithmetic you need <em>numeric equals</em></p></div>
@@ -1507,8 +1706,8 @@ false.</code></pre>
 <pre><code>== is 'Are the same place in the standard order'</code></pre>
 </div></div>
 <div class="paragraph"><p>These two terms are either two things that aren&#8217;t variables and are =, or they are variables and they share.
-I&#8217;m a fairly experienced Prolog programmer. I just finished ten minutes of mind bending attempt to understand this
-operator. I&#8217;ve never used it. So, as a beginner, you can ignore it. It is <em>not</em> what you want.</p></div>
+It asks "Could these two things possibly be the same?"
+So, as a beginner, you can ignore it. It is probably <em>not</em> what you want.</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>6 ?- X = Y.
@@ -1517,13 +1716,23 @@ X = Y.
 7 ?- X == Y.
 false.</code></pre>
 </div></div>
-<div class="paragraph" id="return"><p>Wrong! Nothing has a return value. If you&#8217;re coming from Java, it&#8217;s like everything is void return type.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_so_everything_returns_true_or_false_right">23. So everything returns true or false, right?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Wrong! Nothing has a return value. If you&#8217;re coming from Java, it&#8217;s like everything is void return type.</p></div>
 <div class="paragraph"><p>Instead of a return, Prolog predicates <strong>succeed</strong> or <strong>fail</strong>. If they fail, Prolog backs up, undoing bindings,
 (this is backtracking) until it reaches the last <em>choice point</em>. Then it tries again with the next choice.</p></div>
 <div class="paragraph"><p><em>true</em> is an atom, and also a basic predicate that succeeds.</p></div>
 <div class="paragraph"><p><em>false</em> is an atom  but not a predicate.</p></div>
 <div class="paragraph"><p><em>fail</em> is an atom and a basic predicate that fails.</p></div>
-<div class="paragraph" id="if"><p>There is an operator, &#8594;.  Avoid it as a newbie.  It&#8217;s not really <em>if</em>, it&#8217;s more like the ?: operator in C++.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_make_an_if_statement">24. How do I make an if statement?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>There is an operator, &#8594;.  Avoid it as a newbie.  It&#8217;s not really <em>if</em>, it&#8217;s more like the ?: operator in C++.</p></div>
 <div class="paragraph"><p>Instead, use case based reasoning.</p></div>
 <div class="paragraph"><p>Suppose I want to make a predicate that prints a die roll. But instead of just the number, when it&#8217;s 2 I want it
 to print <em>snake eyes</em>. In Java it&#8217;d be something like</p></div>
@@ -1695,10 +1904,17 @@ print_roll(Roll) :-
 <div class="paragraph"><p>and wonder why they have bugs&#8230; just say <strong>no</strong> to the &#8594;  and ; operators.</p></div>
 <div class="paragraph"><p>(PS, the above has a bug, the 4 case is missing. It might have other bugs as well. Who knows. I&#8217;m fairly
 confident the reasonable cases above are correct just by inspection.)</p></div>
-<div class="paragraph" id="loop"><p>Set your throttle to max, go into a slight dive, pull back on the stick, and climb, keeping your airspeed well above stall.
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_make_a_loop">25. How do I make a loop?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Set your throttle to max, go into a slight dive, pull back on the stick, and climb, keeping your airspeed well above stall.
 At the top of the loop cut back on the throttle, keep the stick back, slowly push it forward as you descend.</p></div>
 <div class="paragraph"><p>Oh, probably not&#8230;</p></div>
 <div class="paragraph"><p>Actually, there&#8217;s three ways to do it.</p></div>
+<div class="sect2">
+<h3 id="_recursion">25.1. Recursion</h3>
 <div class="paragraph"><p>Replace the loop with recursion. See the <em>standard recursion pattern</em> above.</p></div>
 <div class="listingblock">
 <div class="content">
@@ -1708,6 +1924,9 @@ recursive_countdown(X) :-
         NX is X - 1,
         recursive_countdown(NX).</code></pre>
 </div></div>
+</div>
+<div class="sect2">
+<h3 id="_failure_driven_loop">25.2. Failure Driven Loop</h3>
 <div class="paragraph"><p>Prolog will backtrack and try again with a different solution. Hey, that&#8217;s a loop!</p></div>
 <div class="paragraph"><p>Between succeeds when it&#8217;s 3rd argument is an integer from it&#8217;s first to it&#8217;s last.</p></div>
 <div class="listingblock">
@@ -1730,7 +1949,13 @@ X = 5.</code></pre>
 </div></div>
 <div class="paragraph"><p>Which is a good thing in this case. It&#8217;ll keep trying different values of A, and printing the
 number we want along the way, until A reaches 10.</p></div>
-<div class="paragraph" id="args"><p>This is an example of how to pass things up and down the recursion stack.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_return_if_everything_8217_s_void">26. How do I return if everything&#8217;s void?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This is an example of how to pass things up and down the recursion stack.</p></div>
 <div class="paragraph"><p>Say you have some numbers in a list. You want to mod them with 12 and add them.</p></div>
 <div class="paragraph"><p>Takes a list in and binds Sum to the sum of the lists elements mod 12</p></div>
 <div class="listingblock">
@@ -1759,12 +1984,14 @@ clause unifies</p></div>
 </div></div>
 <div class="paragraph"><p>This pattern is very common. It happens not just with lists, but with anything you&#8217;d process sequentially,
 like reading lines from a file and summing them, or summing some power series.</p></div>
-</div></div>
+</div>
+</div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-04-02 21:56:41 Pacific Daylight Time
+Version 1.1<br />
+Last updated 2016-04-02 23:01:47 Pacific Daylight Time
 </div>
 </div>
 </body>

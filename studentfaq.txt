@@ -1,7 +1,6 @@
 ﻿Frequently Asked Questions for ##Prolog
-===================================================
-Anne Ogborn <annie66us@yahoo.com>
-:Author Initials: AO
+=======================================
+Anne Ogborn <anne@swi-prolog.org>
 :Revision: 1.1
 :Revision: 1.1
 :Date:  April 2, 2016
@@ -10,42 +9,22 @@ Anne Ogborn <annie66us@yahoo.com>
 :numbered:
 :website: http://www.pathwayslms.com/swipltuts/
 :theme: pathways
-Anne Ogborn <annie66us@yahoo.com>
+
 v0.1  June 2013
 v1.1   April 2016 - Made topic titles clearer
 
-link:../index.html[Home]
+Note - Anne Ogborn and Michael Richter are the authors of this FAQ.  Not sure how Michael's name's been left off it all this time.
 
-* <<strong_advice, Strong Advice for Students on ##prolog>>
-* <<regulars, And A Plea To The Regulars>>
-* <<which, Which Prolog To Use>>
-* <<hello, Hello World on Various OSes>>
-* <<cheat, Ten Second Syntax Cheat Sheet>>
-* <<not_repl, Why can't I type in code at the repl?>>
-* <<hung, Prolog Hung>>
-* <<find_help, How do I find the predicate that does so and so?>>
-* <<debug, How can I see what my code is doing?>>
-* <<howdy, Difference between "hello", hello, HowAreYa, and \'Howdy!'>>
-* <<blue, I get true, then false when I expected just true>>
-* <<list, How do I get all the results in a list?>>
-* <<recursion, The standard recursion pattern>>
-* <<real_world, Can I make real world programs in Prolog?>>
-* <<toy, So why am I doing toy problems in this class?>>
-* <<heard, So why haven't I heard of Prolog before?>>
-* <<web, How do I make a web page in Prolog?>>
-* <<wtf, WTF? 4 = 2 + 2 fails?>>
-* <<return, So everything returns true or false, right?>>
-* <<if, How do I make an if statement?>>
-* <<loop, How do I make a loop?>>
-* <<args, How do I return if everything's void?>>
+link:/swipltuts/index.html[Up to All Tutorials]
 
-[[strong_advice]]
-Strong Advice for Students on ##prolog
---------------------------------------
+Asking Questions on ##prolog
+----------------------------
 
-There are about 100,000 students *each semester* who take a programming languages class that includes some basic Prolog.
+Some strong advice for undergrad students asking questions on ##prolog.
 
-There are about 5000 commercial Prolog programmers in the entire world, and 3500 or so researchers who use Prolog (these numbers are completely wild guesses).
+There are about 50,000 students *each semester* who take a programming languages class that includes some basic Prolog.
+
+There are about 5000 commercial Prolog programmers in the entire world, and another 15000 or so researchers who use Prolog (these numbers are completely wild guesses).
 
 The small community means if you discover the great fun and power of Prolog and fall in love with it, we'll take you to our breast. BUT...
 
@@ -148,7 +127,6 @@ expressing your low opinion of Prolog and loudly bemoaning being forced to under
 
 * After we spend 30 minutes solving your complex issue, don't kill the channel immediately without saying thanks. Maybe our answer only _looked_ right, and you'll be back in 10 minutes.
 
-[[regulars]]
 And A Plea To The Regulars
 --------------------------
 
@@ -177,16 +155,15 @@ The Rules of The Road
 
 I'd offer this "Rule of the Road" - in sailing the Rules of the Road establish which of two ships approaching on a collision course should turn.  I'd suggest our rule of the road is "If someone is already engaging the new Prolog programmer, let them continue."
 
-
 All that out of the way, On to the FAQ
 
-[[which]]
 Which Prolog To Use
 -------------------
 
 I recommend http://www.swi-prolog.org[SWI-Prolog]. 
+
 There are many good things to be said about other implementations of Prolog. Some are faster in some circumstances, have nice constraint libraries, or other attractive features, but you won't be using any of those things as a beginning student. 
-Installation on windows and mac is simple, there are http://www.swi-prolog.org/download/stable[installers for mac and windows and packages for most linux distros].
+Installation on windows and mac is simple, there are http://www.swi-prolog.org/download/stable[installers for mac and windows and packages for most linux distros]. Building from sources on Linux is also simple.
 
 SWI-Prolog has a built in IDE with a graphical debugger and syntax coloring editor. 
 
@@ -194,7 +171,6 @@ Further, it's the most popular Prolog for commercial and research use, so the pe
 
 Bias warning - one of the authors of this FAQ is a peripheral contributor to SWI-Prolog.
 
-[[hello]]
 Hello World
 -----------
 
@@ -322,9 +298,8 @@ Now ask Prolog if hello_world is true by querying
 
 and it prints hello world on the console and assures you that it's indeed true.
 
-[[cheat]]
-Ten Second Syntax Cheat Sheet
------------------------------
+Syntax Cheat Sheet
+------------------
 
 ----
 % comments start with a percent sign
@@ -352,7 +327,15 @@ format('~s~n', ["Code strings need twiddle s. The twiddle n adds a newline"]).
 format('atom: ~w~ninteger: ~w~nfloat: ~w~nlist: ~w~n', [hello, 1, 3.7,  [a, list, of, things]]).
 ----
 
-[[not_repl]]
+Where to type in code
+---------------------
+
+Prolog's basic paradigm is to define a 'world' (a *knowledge base* ) of facts and rules, and then ask the system to 
+prove queries based on those rules.
+
+The facts and rules go in a file. You enter the queries at the +?-+ prompt, in the terminal window if you're on mac or linux, or in the console window on Windows. See [[Hello World]] for more detail.
+
+
 Why can't I type in code at the repl?
 -------------------------------------
 
@@ -365,9 +348,13 @@ If you really do want to enter code from the top level, you can use assert:
 
 Note the extra parens.
 
-But I don't recommend it.
+But I don't recommend doing this. Your code will go away when you halt.
 
-[[hung]]
+More Solutions
+--------------
+
+See [[Prolog Hung]]
+
 Prolog Hung
 -----------
 
@@ -427,7 +414,6 @@ ERROR: Out of local stack
 
 Both are out of control recursion. They call themselves over and over without limit.
 
-[[find_help]]
 How do I find the predicate that does so and so?
 ------------------------------------------------
 
@@ -435,9 +421,10 @@ How do I find the predicate that does so and so?
 
 * The search doesn't cover some things. http://www.google.com/[Google] can be a friend.
 
-[[debug]]
-How can I see what my code is doing?
------------------------------------
+The Graphic Debugger
+--------------------
+
+There are two debuggers for SWI-Prolog. We recommend the graphical one for beginners.
 
 Query
 
@@ -457,9 +444,10 @@ Now when mypred is unified you'll see a nice graphical debugger.
 
 Query nospy(mypred) to get rid of gthe breakpoint.
 
-[[howdy]]
-Difference between "hello", hello, HowAreYa, and \'Howdy!'
----------------------------------------------------------
+Variables, atoms, strings, and case
+-----------------------------------
+
+What's the difference among "hello", hello, HowAreYa, and \'Howdy!' ?
 
 Prolog's infinitely weird. It has no control structures, backs up, doesn't have functions or return, and
 _now_ you're telling me this language doesn't have *STRINGS* for God's sake?
@@ -606,7 +594,6 @@ A's 3, we just said so. X, we don't know, could be anything.
 When we leave quadratic_roots, X is 'bound' - it's got a value (-0.33333 in this case).
 It will also bind to -1. But it won't bind to -2.0
 
-[[blue]]
 I get true, then false when I expected just true
 ------------------------------------------------
 
@@ -632,7 +619,45 @@ He thought he might have another solution, but he doesn't.
 
 Students often try to eliminate these. They have no effect on execution.
 
-[[list]]
+If you do want to eliminate them, read the section on the cut
+
+The Cut
+-------
+
+The cut operator is often confusing for beginning Prolog programmers.
+
+As Prolog executes, it leaves behind a 'trail' of 'choice points'.
+
+Remember that all Prolog code is *searching for a proof*. If it calls a goal, that goal may have more than one answer it can give.
+
+Consider the question "Where can I get a job as a programmer?"
+
+"Portland" is a good answer. So is "Silicon Valley" or "Boston".  "Imbler, Oregon" probably not so much so.
+
+Now suppose I ask "What places have nice weather?"
+
+"San Diego", "Hawaii", and "Silicon Valley" are good choices. "Seattle" isn't.
+
+So if I want to find a place I can work as a programmer with nice weather, I first try "Portland". I make a mental note
+called a 'choice point' that there are others if Portland doesn't work out, and I ask if Portland has nice weather.
+
+No, it doesn't, so I undo my assumption I'll be in Portland - I undo my computation since the last choice point. 
+I try "Silicon Valley" and hey, that works.
+
+I now have an answer. Maybe the cost of living in Silicon Valley is too high, and I back up and try something else.
+
+This is great for my "where to work" scenario, but sometimes finding an answer is enough to tell you there aren't any other answers.
+
+"Where did I leave my keys?"
+
+If you find your keys in your coat pocket, they're definitely not on the nightstand, in the car, on the kitchen table, etc.
+
+To express this idea, we have the cut operator, +!+
+
+Cut means 'OK, I've got what I'm sure is the last answer for this predicate'.  Any choice points created *since entering this predicate* are destroyed, including trying other clauses of this predicate.
+
+For a good example of this, see [[How to make an if]]
+
 How do I get all the results in a list?
 ---------------------------------------
 
@@ -657,7 +682,6 @@ So my brother appears twice in my list of siblings.
 
 setof is like bagof, but removes repeats and sorts the items.
 
-[[recursion]]
 The standard recursion pattern
 ------------------------------
 
@@ -671,11 +695,10 @@ print_list([Head|Tail]) :-
       print_list(Tail).   % do the rest
 ----
 
-[[real_world]]
 Can I make real world programs in Prolog?
 -----------------------------------------
 
-Yes. 40% of Australia's stock trading is done via a large Prolog application.
+Yes. 40% of New Zealand's stock trading is done via a large Prolog application.
 
 The web server that serves the SWI-Prolog web site is itself written in Prolog.
 
@@ -683,14 +706,12 @@ There are 3D libraries, machine vision libraries, and audio applications in Prol
 
 There is a SPARQL server in Prolog.
 
-[[toy]]
 So why am I doing toy problems in this class?
 ---------------------------------------------
 
 That's a very good question. You should ask your instructor (and demand more realistic education
 in Prolog).
 
-[[heard]]
 So why haven't I heard of Prolog before?
 ----------------------------------------
 
@@ -702,18 +723,42 @@ Take your choice:
 
 * Uh, that's classified (search for Prolog help wanted ads to understand this)
 
-[[web]]
+Isn't Prolog really OLD?
+------------------------
+
+Yes, it is. It's history is a bit convoluted, but it started in the 1970's. The SWI-Prolog code base is approaching it's 30th birthday.
+
 How do I make a web page in Prolog?
 -----------------------------------
 
 A tutorial on the web framework for SWI-Prolog is link:../html/index.html[here].
 
-[[wtf]]
+Why Can't I do arithmetic?
+--------------------------
+
+Programmers coming from other languages expect these two lines to work
+
+----
+    my_foo(3 + C)
+	
+	4 = 2 + 2
+----
+
+Neither one will do what you expect.
+
 WTF, 4 = 2 + 2 fails?
----------------------
 
 Yes, because you're asking if the term '+'(2,2) can be unified with the term 4.
 It can't. They're different.
+
+The first example, +my_foo(3 + C)+, is the equivilent of
+
+----
+     Expr = '+'(3, C),
+	 my_foo(Expr)
+----
+
+Expressions are not evaluated by default.
 
 All code in Prolog can be treated as data apart from any meaning as programs.  
 Everything is a term.  Some terms are executable.
@@ -757,8 +802,8 @@ false.
  == is 'Are the same place in the standard order'
 
 These two terms are either two things that aren't variables and are =, or they are variables and they share.
-I'm a fairly experienced Prolog programmer. I just finished ten minutes of mind bending attempt to understand this
-operator. I've never used it. So, as a beginner, you can ignore it. It is _not_ what you want.
+It asks "Could these two things possibly be the same?"
+So, as a beginner, you can ignore it. It is probably _not_ what you want.
 
 ----
 6 ?- X = Y.
@@ -768,7 +813,6 @@ X = Y.
 false.
 ----
 
-[[return]]
 So everything returns true or false, right?
 -------------------------------------------
 
@@ -783,7 +827,6 @@ Instead of a return, Prolog predicates *succeed* or *fail*. If they fail, Prolog
 
 'fail' is an atom and a basic predicate that fails.
 
-[[if]]
 How do I make an if statement?
 ------------------------------
 
@@ -983,7 +1026,6 @@ and wonder why they have bugs... just say *no* to the ->  and ; operators.
 (PS, the above has a bug, the 4 case is missing. It might have other bugs as well. Who knows. I'm fairly
 confident the reasonable cases above are correct just by inspection.)
 
-[[loop]]
 How do I make a loop?
 ---------------------
 
@@ -1036,7 +1078,6 @@ failure_driven_countdown :-
 Which is a good thing in this case. It'll keep trying different values of A, and printing the
 number we want along the way, until A reaches 10.
 
-[[args]]
 How do I return if everything's void?
 -------------------------------------
 
