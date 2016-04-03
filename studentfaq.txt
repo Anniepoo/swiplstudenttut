@@ -1,7 +1,6 @@
 ﻿Frequently Asked Questions for ##Prolog
 =======================================
-Anne Ogborn <anne@swi-prolog.org>
-:Revision: 1.1
+:Author: Anne Ogborn <anne@swi-prolog.org>, Michael Richter<ttmrichter@gmail.com>
 :Revision: 1.1
 :Date:  April 2, 2016
 :toc2:
@@ -11,9 +10,8 @@ Anne Ogborn <anne@swi-prolog.org>
 :theme: pathways
 
 v0.1  June 2013
-v1.1   April 2016 - Made topic titles clearer
 
-Note - Anne Ogborn and Michael Richter are the authors of this FAQ.  Not sure how Michael's name's been left off it all this time.
+v1.1   April 2016 - Made topic titles clearer, added some questions
 
 link:/swipltuts/index.html[Up to All Tutorials]
 
@@ -171,6 +169,7 @@ Further, it's the most popular Prolog for commercial and research use, so the pe
 
 Bias warning - one of the authors of this FAQ is a peripheral contributor to SWI-Prolog.
 
+[[hello]]
 Hello World
 -----------
 
@@ -333,7 +332,7 @@ Where to type in code
 Prolog's basic paradigm is to define a 'world' (a *knowledge base* ) of facts and rules, and then ask the system to 
 prove queries based on those rules.
 
-The facts and rules go in a file. You enter the queries at the +?-+ prompt, in the terminal window if you're on mac or linux, or in the console window on Windows. See [[Hello World]] for more detail.
+The facts and rules go in a file. You enter the queries at the +?-+ prompt, in the terminal window if you're on mac or linux, or in the console window on Windows. See <<hello, Hello World>> for more detail.
 
 
 Why can't I type in code at the repl?
@@ -353,8 +352,9 @@ But I don't recommend doing this. Your code will go away when you halt.
 More Solutions
 --------------
 
-See [[Prolog Hung]]
+See <<hung, Prolog Hung>>
 
+[[hung]]
 Prolog Hung
 -----------
 
@@ -656,7 +656,7 @@ To express this idea, we have the cut operator, +!+
 
 Cut means 'OK, I've got what I'm sure is the last answer for this predicate'.  Any choice points created *since entering this predicate* are destroyed, including trying other clauses of this predicate.
 
-For a good example of this, see [[How to make an if]]
+For a good example of this, see link:if[How to make an if]
 
 How do I get all the results in a list?
 ---------------------------------------
@@ -827,6 +827,7 @@ Instead of a return, Prolog predicates *succeed* or *fail*. If they fail, Prolog
 
 'fail' is an atom and a basic predicate that fails.
 
+[[if]]
 How do I make an if statement?
 ------------------------------
 
