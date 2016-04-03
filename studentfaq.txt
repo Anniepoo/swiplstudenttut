@@ -832,7 +832,7 @@ X = Y.
 false.
 ----
 
-[[void]]
+[[return]]
 So everything returns true or false, right?
 -------------------------------------------
 
