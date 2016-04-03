@@ -1,7 +1,18 @@
 ﻿Frequently Asked Questions for ##Prolog
-=======================================
-Anne Ogborn <aogborn@uh.edu>
+===================================================
+Anne Ogborn <annie66us@yahoo.com>
+:Author Initials: AO
+:Revision: 1.1
+:Revision: 1.1
+:Date:  April 2, 2016
+:toc2:
+:icons:
+:numbered:
+:website: http://www.pathwayslms.com/swipltuts/
+:theme: pathways
+Anne Ogborn <annie66us@yahoo.com>
 v0.1  June 2013
+v1.1   April 2016 - Made topic titles clearer
 
 link:../index.html[Home]
 
